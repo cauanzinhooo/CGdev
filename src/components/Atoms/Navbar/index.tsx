@@ -20,12 +20,12 @@ const Navbar = () => {
         <FaHamburger name={open ? 'close' : 'menu'} />
       </div>
       <ul
-        className={`absolute left-0 w-full    border-t-2 bg-lime-600 pb-12 pl-9 transition-all duration-500 ease-in md:static md:z-auto md:flex md:w-auto md:items-center md:pb-0 md:pl-0 ${
+        className={` absolute left-0 z-20  h-[600px]  w-full  pb-12 pl-9 transition-all    duration-500 ease-in sm:h-[100px] sm:bg-gradient-to-r sm:from-lime-600 sm:to-lime-800   md:static md:z-auto md:flex md:w-auto md:items-center md:pb-0 md:pl-0 ${
           open ? 'top-20 ' : 'top-[-490px]'
         }`}
       >
         {Links.map((link) => (
-          <li key={link.name} className="my-7  text-xl md:my-0 md:ml-8">
+          <li key={link.name} className="my-7   text-xl md:my-0 md:ml-8">
             <a
               href={link.link}
               className="text-green-100 duration-500 hover:text-green-200"

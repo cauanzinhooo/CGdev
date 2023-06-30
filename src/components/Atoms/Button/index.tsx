@@ -15,12 +15,12 @@ const Button = ({
   return (
     <button
       type={type}
-      className={`${classNames('font-signika font-bold', {
+      className={`${classNames('font-mono font-bold ', {
         'bg-slate-200  text-lime-700 px-7 text-2xl rounded-3xl hover:bg-transparent duration-150 hover:text-slate-50 hover:border-[1px] hover:border-slate-200':
           sizes === 'md',
       })}`}
     >
-      <div className="flex items-center">
+      <div className="flex items-center font-mono">
         {children}
         {!!icon && icon}
       </div>
