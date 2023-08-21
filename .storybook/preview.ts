@@ -2,6 +2,8 @@ import '../src/styles/global.css';
 
 import type { Preview } from '@storybook/react';
 
+export const parameters = { layout: 'fullscreen' };
+
 const preview: Preview = {
   parameters: {
     actions: { argTypesRegex: '^on[A-Z].*' },
