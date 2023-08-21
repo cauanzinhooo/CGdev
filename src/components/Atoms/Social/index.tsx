@@ -1,25 +1,45 @@
-import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FaEnvelope, FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { tv } from 'tailwind-variants';
 
+const Socials = tv({
+  slots: {
+    socialWrapper: 'hidden items-center justify-center lg:flex',
+    icons: 'text-slate-100 hover:text-red-600',
+    linkIcon: 'mx-4 text-4xl no-underline hover:border-none',
+  },
+});
+
+const { socialWrapper, icons, linkIcon } = Socials();
 const Social = () => {
   return (
-    <div className=" mb-4 flex justify-center sm:mt-9 sm:justify-between ">
+    <div className={socialWrapper()}>
       <a
-        className=" mx-4 text-4xl no-underline hover:border-none "
+        target="_blank"
+        className={linkIcon()}
         href="https://www.instagram.com/caua_gm/?next=%2F"
       >
-        <FaInstagram className=" ml-5 text-green-100 hover:text-slate-200" />
+        <FaInstagram className={`ml-5 ${icons()}`} />
       </a>
       <a
-        className=" mx-4  text-4xl no-underline hover:border-none  "
+        target="_blank"
+        className={linkIcon()}
         href="https://www.linkedin.com/in/cau%C3%A3-gomes-138150216/"
       >
-        <FaLinkedin className="text-green-100 hover:text-slate-200" />
+        <FaLinkedin className={icons()} />
       </a>
       <a
-        className=" mx-4 text-4xl  no-underline hover:border-none "
+        target="_blank"
+        className={linkIcon()}
         href="https://github.com/cauanzinhooo"
       >
-        <FaGithub className="text-green-100 hover:text-slate-200" />
+        <FaGithub className={icons()} />
+      </a>
+      <a
+        target="_blank"
+        className={linkIcon()}
+        href="https://github.com/cauanzinhooo"
+      >
+        <FaEnvelope className={icons()} />
       </a>
     </div>
   );

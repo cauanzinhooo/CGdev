@@ -1,45 +1,101 @@
-import Image from 'next/Image';
-import { FaChevronRight } from 'react-icons/fa';
+import Image from 'next/image';
+import { useState } from 'react';
+import {
+  FaBars,
+  FaEnvelope,
+  FaGithub,
+  FaInstagram,
+  FaLinkedin,
+  FaTimes,
+} from 'react-icons/fa';
+import { tv } from 'tailwind-variants';
 
-import Button from '@/components/Atoms/Button';
-import Logo from '@/components/Atoms/Logo';
+import LineMenu from '@/components/Atoms/LineMenu';
 import Social from '@/components/Atoms/Social';
-import file from '@/public/assets/images/file.svg';
+import Logo from '@/public/assets/images/cgdev.svg';
 
+const header = tv({
+  slots: {
+    headerFlex: 'sexosexo h-52 w-full bg-[#A9A9A9] lg:h-60',
+    container: 'container mx-auto flex items-center justify-between py-6',
+    barsMenu: 'mt-2 flex items-center px-3 text-4xl text-zinc-50 lg:hidden',
+    icos: 'text-slate-100 hover:text-red-600',
+    linkIcon: 'mx-4 text-4xl no-underline hover:border-none',
+  },
+});
+const { headerFlex, container, barsMenu, icos, linkIcon } = header();
 const Header = () => {
+  const [openMenu, setOpenMenu] = useState(false);
   return (
-    <>
-      <header className=" container relative z-10 m-auto border-b-[1px] text-center sm:flex sm:justify-between ">
-        <Logo size="large" />
-        <Social />
-      </header>
-      <section className="">
-        <div className="sexosexo absolute left-0 top-0 h-full w-full bg-gradient-to-r   from-lime-600 to-lime-800" />
-        <div className="relative z-10 flex">
-          <div className=" h-[400px] w-full max-w-[440px] text-center font-bold ">
-            <h1 className="text-4xl text-white sm:text-5xl ">
-              Desenvolvedor Web
-            </h1>
-            <p className="mb-6 text-white">
-              Meu nome é Cauã Gomes e sou apaixonado por programação Neste
-              portfólio, gostaria de compartilhar com você uma amostra do meu
-              trabalho e destacar minhas habilidades e experiências.
-            </p>
-            <Button icon={<FaChevronRight />} sizes="md">
-              Saiba Mais
-            </Button>
-          </div>
-          <div className="relative h-[269px] w-[300px] ">
+    <header className={headerFlex()}>
+      <div>
+        <div className=" border-b-[0.5px] border-slate-100">
+          <div className={container()}>
             <Image
-              className="absolute bottom-[-50px] z-10"
+              className="px-3"
               width={300}
-              alt="fileimg"
-              src={file}
+              height={300}
+              alt="IMAGE"
+              src={Logo}
             />
+            <Social />
+            <div className={barsMenu()}>
+              <button onClick={() => setOpenMenu(true)} type="button">
+                <FaBars size={50} />
+              </button>
+            </div>
           </div>
         </div>
-      </section>
-    </>
+        {openMenu && (
+          <div className="sexosexo fixed left-0 top-0 z-50 h-full w-screen overflow-y-auto bg-[#A9A9A9]">
+            <div>
+              <button
+                className="p-5 text-4xl text-zinc-50"
+                onClick={() => setOpenMenu(false)}
+                type="button"
+              >
+                <FaTimes />
+              </button>
+            </div>
+            <div>
+              <div className="flex flex-col">
+                <LineMenu />
+              </div>
+              <div className="mt-10 flex items-center justify-center">
+                <a
+                  target="_blank"
+                  className={linkIcon()}
+                  href="https://www.instagram.com/caua_gm/?next=%2F"
+                >
+                  <FaInstagram className={icos()} />
+                </a>
+                <a
+                  target="_blank"
+                  className={linkIcon()}
+                  href="https://www.linkedin.com/in/cau%C3%A3-gomes-138150216/"
+                >
+                  <FaLinkedin className={icos()} />
+                </a>
+                <a
+                  target="_blank"
+                  className={linkIcon()}
+                  href="https://github.com/cauanzinhooo"
+                >
+                  <FaGithub className={icos()} />
+                </a>
+                <a
+                  target="_blank"
+                  className={linkIcon()}
+                  href="https://github.com/cauanzinhooo"
+                >
+                  <FaEnvelope className={icos()} />
+                </a>
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+    </header>
   );
 };
 export default Header;

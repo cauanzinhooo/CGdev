@@ -15,9 +15,8 @@ const Logo = ({ size = 'small' }: LogoProps) => {
           '  text-[60px] bg-gradient-to-r from-slate-50 via-slate-200  to-green-300 bg-clip-text text-transparent hover:cursor-pointer ':
             size === 'large',
         })}`}
-      >
-        CGDev!
-      </span>
+      />
+      LOGO
     </div>
   );
 };
