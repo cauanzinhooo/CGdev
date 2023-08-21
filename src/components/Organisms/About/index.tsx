@@ -9,12 +9,11 @@ import ImageFile from '@/public/assets/images/FILES.svg';
 const aboutSection = tv({
   slots: {
     aboutWrapper:
-      'container z-10 mx-auto  flex flex-col lg:flex  lg:flex-row lg:justify-between',
+      'container relative z-10 mx-auto flex flex-col lg:flex  lg:flex-row lg:justify-between',
     headingWrapper:
       'mx-auto w-full max-w-[500px] text-center text-[42px] lg:mx-0 lg:text-left 2xl:max-w-[700px]',
 
-    aboutHeading:
-      ' px-2 font-bold text-[#A9A9A9] sm:text-[70px] 2xl:text-[90px]',
+    aboutHeading: ' px-2 font-bold text-[#fff] sm:text-[70px] 2xl:text-[90px]',
     aboutParagraf: 'px-3 text-sm text-[#A9A9A9]  sm:text-xl',
     buttonsWrapper:
       'mt-5 flex flex-col items-center gap-6 sm:flex sm:flex-row sm:justify-center lg:justify-start',
