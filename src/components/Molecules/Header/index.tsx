@@ -1,4 +1,4 @@
-import Image from 'next/Image';
+import Image from 'next/image';
 import { FaChevronRight } from 'react-icons/fa';
 
 import Button from '@/components/Atoms/Button';
