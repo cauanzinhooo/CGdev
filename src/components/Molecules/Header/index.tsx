@@ -16,7 +16,7 @@ import Logo from '@/public/assets/images/cgdev.svg';
 
 const header = tv({
   slots: {
-    headerFlex: 'relative h-52 w-full lg:h-60',
+    headerFlex: 'relative h-52 w-full',
     container: 'container mx-auto flex items-center justify-between py-6',
     barsMenu: 'mt-2 flex items-center px-3 text-4xl text-zinc-50 lg:hidden',
     icos: 'text-slate-100 hover:text-red-600',
@@ -28,8 +28,7 @@ const Header = () => {
   const [openMenu, setOpenMenu] = useState(false);
   return (
     <header className={headerFlex()}>
-      <div className="sexosexo z-0" />
-
+      <div className=" sexosexo z-0" />
       <div className=" relative z-20 border-b-[0.5px] border-slate-100">
         <div className={container()}>
           <Image

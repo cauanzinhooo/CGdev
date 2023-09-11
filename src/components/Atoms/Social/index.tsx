@@ -1,4 +1,4 @@
-import { FaEnvelope, FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { tv } from 'tailwind-variants';
 
 const Socials = tv({
@@ -13,13 +13,6 @@ const { socialWrapper, icons, linkIcon } = Socials();
 const Social = () => {
   return (
     <div className={socialWrapper()}>
-      <a
-        target="_blank"
-        className={linkIcon()}
-        href="https://www.instagram.com/caua_gm/?next=%2F"
-      >
-        <FaInstagram className={`ml-5 ${icons()}`} />
-      </a>
       <a
         target="_blank"
         className={linkIcon()}

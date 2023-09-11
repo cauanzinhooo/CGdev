@@ -3,7 +3,7 @@ import { tv } from 'tailwind-variants';
 
 const footer = tv({
   slots: {
-    footerWrapper: 'mt-12 w-full bg-[#A9A9A9]',
+    footerWrapper: 'mt-12 w-full bg-[#405230]',
     footerContainer:
       'container mx-auto flex flex-col gap-2 lg:flex lg:flex-row lg:gap-5 ',
     iconsWrapper: 'flex items-center gap-2 text-2xl  text-slate-50',

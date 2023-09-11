@@ -1,12 +1,6 @@
-import Header from '@/components/Molecules/Header';
-import About from '@/components/Organisms/About';
+import ContactSection from '@/components/Organisms/ContactSection';
 
 const aboutt = () => {
-  return (
-    <>
-      <Header />
-      <About />
-    </>
-  );
+  return <ContactSection />;
 };
 export default aboutt;
