@@ -9,7 +9,7 @@ const Socials = tv({
     },
     size: {
       sm: 'flex text-4xl',
-      md: 'flex px-5 text-[30px] sm:text-[50px] xl:text-[60px]',
+      md: 'flex px-5 text-[40px] sm:text-[50px] xl:text-[60px]',
     },
   },
 });
