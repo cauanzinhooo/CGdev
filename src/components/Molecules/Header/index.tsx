@@ -38,7 +38,8 @@ const Header = () => {
             alt="IMAGE"
             src={Logo}
           />
-          <Social />
+          <Social size="md" />
+
           <div className={barsMenu()}>
             <button onClick={() => setOpenMenu(true)} type="button">
               <FaBars size={50} />

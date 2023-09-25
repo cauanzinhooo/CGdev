@@ -2,37 +2,41 @@ import { FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { tv } from 'tailwind-variants';
 
 const Socials = tv({
-  slots: {
-    socialWrapper: 'hidden items-center justify-center lg:flex',
-    icons: 'text-slate-100 hover:text-red-600',
-    linkIcon: 'mx-4 text-4xl no-underline hover:border-none',
+  base: 'hidden lg:flex lg:flex-row',
+  variants: {
+    outlined: {
+      true: 'mx-2 flex rounded-full border-[2px] border-slate-50 p-4 hover:border-[#EFEFEF] hover:text-[#EFEFEF]',
+    },
+    size: {
+      sm: 'flex text-4xl',
+      md: 'flex px-5 text-[30px] sm:text-[50px] xl:text-[60px]',
+    },
   },
 });
 
-const { socialWrapper, icons, linkIcon } = Socials();
-const Social = () => {
+const Social = ({ size, outlined }: any) => {
   return (
-    <div className={socialWrapper()}>
+    <div className={Socials({ size })}>
       <a
+        className={Socials({ outlined })}
         target="_blank"
-        className={linkIcon()}
         href="https://www.linkedin.com/in/cau%C3%A3-gomes-138150216/"
       >
-        <FaLinkedin className={icons()} />
+        <FaLinkedin />
       </a>
       <a
+        className={Socials({ outlined })}
         target="_blank"
-        className={linkIcon()}
         href="https://github.com/cauanzinhooo"
       >
-        <FaGithub className={icons()} />
+        <FaGithub />
       </a>
       <a
+        className={Socials({ outlined })}
         target="_blank"
-        className={linkIcon()}
         href="https://github.com/cauanzinhooo"
       >
-        <FaEnvelope className={icons()} />
+        <FaEnvelope />
       </a>
     </div>
   );

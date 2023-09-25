@@ -10,20 +10,25 @@ export type ButtonProps = ComponentProps<'button'> &
     children: React.ReactNode;
   } & React.ButtonHTMLAttributes<HTMLButtonElement>;
 const button = tv({
-  base: 'rounded-xl  bg-[#A8BF8C]  text-2xl text-slate-100 duration-150 hover:border-[1px] hover:border-slate-200 hover:bg-transparent hover:text-slate-50',
+  base: 'rounded-xl text-2xl text-slate-100 duration-150 hover:border-[1px] hover:border-slate-200 hover:bg-transparent hover:text-slate-50',
   variants: {
+    color: {
+      green: 'bg-[#A8BF8C]',
+      white: 'bg-[#EFEFEF] text-[#A8BF8C]',
+    },
     size: {
       md: 'h-[42px] px-5',
       lg: 'h-[52px] px-7',
     },
   },
   defaultVariants: {
+    color: 'green',
     size: 'md',
   },
 });
-const Button = ({ size, icon, children, type }: ButtonProps) => {
+const Button = ({ color, size, icon, children, type }: ButtonProps) => {
   return (
-    <button type={type} className={button({ size })}>
+    <button type={type} className={button({ size, color })}>
       <div className="flex items-center font-mono">
         {children}
         {!!icon && icon}

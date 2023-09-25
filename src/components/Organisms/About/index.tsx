@@ -1,6 +1,7 @@
 import 'animate.css/animate.min.css';
 
 import Image from 'next/image';
+// @ts-ignore
 import ScrollAnimation from 'react-animate-on-scroll';
 import { FaChevronRight } from 'react-icons/fa';
 import { tv } from 'tailwind-variants';
@@ -19,7 +20,7 @@ const aboutSection = tv({
 
     aboutHeading:
       ' mt-3  px-1 font-mono  text-[43px] font-bold text-[#A8BF8C] min-[500px]:text-[60px] xl:text-[80px] 2xl:text-[90px]',
-    aboutParagraf: ' z-20 px-3   text-xl text-[#A9A9A9]',
+    aboutParagraf: ' z-20 px-3   text-xl text-[#414141]',
     buttonsWrapper:
       'mt-5 flex flex-col items-center gap-6 sm:flex sm:flex-row sm:justify-center lg:justify-start',
     aboutImage: 'relative mx-auto mb-3 mt-5 lg:mx-0 lg:mt-0',
@@ -35,7 +36,7 @@ const {
 } = aboutSection();
 const About = () => {
   return (
-    <section className={aboutWrapper()}>
+    <main className={aboutWrapper()}>
       <ScrollAnimation animateIn="animate__fadeInLeft" animateOnce>
         <div className={headingWrapper()}>
           <h1 className={aboutHeading()}>Desenvolvedor Web</h1>
@@ -45,8 +46,10 @@ const About = () => {
             habilidades e experiências.{' '}
           </p>
           <div className={buttonsWrapper()}>
-            <Button size="md">Contato</Button>
-            <Button icon={<FaChevronRight />} size="md">
+            <Button color="green" size="lg">
+              Contato
+            </Button>
+            <Button color="green" icon={<FaChevronRight />} size="lg">
               Ver Portfólio
             </Button>
           </div>
@@ -61,7 +64,7 @@ const About = () => {
           <Image width={700} alt="ImageFile" src={ImageFiled} />
         </div>
       </ScrollAnimation>
-    </section>
+    </main>
   );
 };
 
