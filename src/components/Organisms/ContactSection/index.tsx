@@ -34,7 +34,7 @@ const ContactSection = () => {
               <Image className={image()} alt="SocialImage" src={socialImage} />
             </div>
             <div className={titleWrap()}>
-              <h2 className=":text-[60px] px-2 text-center  text-5xl    xl:text-[61px]">
+              <h2 className=":text-[60px] px-2 text-center  text-5xl  xl:text-[61px]">
                 Quer entrar em Contato
               </h2>
               <p className="text-xl 2xl:text-2xl">
