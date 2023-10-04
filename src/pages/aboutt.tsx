@@ -1,6 +1,6 @@
-import ContactSection from '@/components/Organisms/ContactSection';
+import Tecnologies from '@/components/Organisms/Tecnologies';
 
 const aboutt = () => {
-  return <ContactSection />;
+  return <Tecnologies />;
 };
 export default aboutt;

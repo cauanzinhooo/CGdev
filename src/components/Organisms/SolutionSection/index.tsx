@@ -1,7 +1,7 @@
 import 'animate.css/animate.min.css';
 
 import ScrollAnimation from 'react-animate-on-scroll';
-import { FaCheckCircle, FaIdCard, FaPager } from 'react-icons/fa';
+import { FaCheckCircle, FaIdCard, FaPager, FaPlusSquare } from 'react-icons/fa';
 import { tv } from 'tailwind-variants';
 
 const LadingCaracteristics = [
@@ -39,15 +39,17 @@ const HotCaracteristics = [
 
 const solution = tv({
   slots: {
-    base: 'my-[62px] w-full',
-    row: 'container mx-auto flex flex-wrap justify-center gap-20 py-32',
-    card: ' rounded-xl bg-green-50 px-20 shadow-md shadow-brown-50',
+    base: 'my-[62px] w-full bg-green-950',
+    row: 'container mx-auto flex flex-wrap justify-center gap-12 py-32',
+    card: ' h-[500px]  w-full max-w-[400px] rounded-xl bg-green-50  ',
     textCard: 'text-center font-mono text-5xl font-bold text-brown-50',
+    cardIcon: 'mb-1 ml-7 text-brown-50',
+    cardCheck: 'mt-2 items-center text-2xl font-bold text-white-0',
   },
 });
 
 const Solution = () => {
-  const { base, row, card, textCard } = solution();
+  const { base, row, card, textCard, cardIcon, cardCheck } = solution();
   return (
     <section className={base()}>
       <h2 className="text-center font-mono text-6xl text-white-0 ">
@@ -59,11 +61,9 @@ const Solution = () => {
             <FaIdCard className="mx-auto text-brown-50" size={100} />
             <h2 className={textCard()}>Landing Page</h2>
             {LadingCaracteristics.map((item) => (
-              <ul className="flex gap-1" key={item.id}>
-                <FaCheckCircle size={50} className="ml-6 text-brown-50" />
-                <li className=" text-xl font-bold text-white-0">
-                  {item.label}
-                </li>
+              <ul className="flex  gap-3" key={item.id}>
+                <FaCheckCircle size={50} className={cardIcon()} />
+                <li className={cardCheck()}>{item.label}</li>
               </ul>
             ))}
           </ScrollAnimation>
@@ -74,10 +74,8 @@ const Solution = () => {
             <h2 className={textCard()}>Hot Site</h2>
             {HotCaracteristics.map((item) => (
               <ul className="flex gap-1" key={item.id}>
-                <FaCheckCircle size={50} className="ml-6 text-brown-50" />
-                <li className=" text-xl font-bold text-white-0">
-                  {item.label}
-                </li>
+                <FaCheckCircle size={50} className={cardIcon()} />
+                <li className={cardCheck()}>{item.label}</li>
               </ul>
             ))}
           </ScrollAnimation>
@@ -87,25 +85,21 @@ const Solution = () => {
             <FaIdCard className="mx-auto text-brown-50" size={100} />
             <h2 className={textCard()}>Landing Page</h2>
             {LadingCaracteristics.map((item) => (
-              <ul className="flex gap-1" key={item.id}>
-                <FaCheckCircle size={50} className="ml-6 text-brown-50" />
-                <li className=" text-xl font-bold text-white-0">
-                  {item.label}
-                </li>
+              <ul className="flex gap-3" key={item.id}>
+                <FaCheckCircle size={50} className={cardIcon()} />
+                <li className={cardCheck()}>{item.label}</li>
               </ul>
             ))}
           </ScrollAnimation>
         </div>
         <div className={card()}>
           <ScrollAnimation animateIn="animate__fadeInLeft" animateOnce>
-            <FaIdCard className="mx-auto text-brown-50" size={100} />
+            <FaPlusSquare className="mx-auto text-brown-50" size={100} />
             <h2 className={textCard()}>Landing Page</h2>
             {LadingCaracteristics.map((item) => (
-              <ul className="flex gap-1" key={item.id}>
-                <FaCheckCircle size={50} className="ml-6 text-brown-50" />
-                <li className=" text-xl font-bold text-white-0">
-                  {item.label}
-                </li>
+              <ul className="flex gap-3" key={item.id}>
+                <FaCheckCircle size={50} className={cardIcon()} />
+                <li className={cardCheck()}>{item.label}</li>
               </ul>
             ))}
           </ScrollAnimation>

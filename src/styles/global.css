@@ -27,4 +27,22 @@
 body{
   background-color: #EFEFEF;
 }
-
+.card {
+  perspective: 150rem;
+  position: relative;
+  box-sizing: border-box;
+}
+.card-side {
+  position: absolute;
+  transition: all 0.8s ease;
+  backface-visibility: hidden;
+}
+.card-side.back {
+  transform: rotateY(-180deg);
+}
+.card:hover .card-side.front {
+  transform: rotateY(180deg);
+}
+.card:hover .card-side.back {
+  transform: rotateY(0deg);
+}
