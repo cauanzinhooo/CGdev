@@ -1,6 +1,6 @@
-import Tecnologies from '@/components/Organisms/Tecnologies';
+import AAASECTION from '@/components/Organisms/AAASECTION';
 
 const aboutt = () => {
-  return <Tecnologies />;
+  return <AAASECTION />;
 };
 export default aboutt;
