@@ -39,6 +39,7 @@
     "react-html-parser": "^2.0.2",
     "react-icons": "^4.9.0",
     "react-scroll": "^1.8.9",
+    "tailwind-clip-path": "^1.0.0",
     "tailwind-variants": "^0.1.13",
     "uuidv4": "^6.2.13"
   },

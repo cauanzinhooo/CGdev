@@ -67,7 +67,7 @@ const WebsiteCaracteristics = [
 // eslint-disable-next-line tailwindcss/classnames-order
 const servicesSection = tv({
   slots: {
-    base: 'my-20 w-full bg-green-950',
+    base: `my-20 w-full bg-green-950 `,
     wrap: 'flex items-center gap-1',
     row: 'container mx-auto flex flex-wrap justify-center gap-10 py-24 sm:gap-32',
     title: `text-center font-mono text-5xl font-bold text-white-0 after:mx-auto after:mt-3 after:block after:h-1 after:w-20
@@ -81,6 +81,7 @@ const ServicesSection = () => {
   const { base, wrap, row, title, icon, caracteristics } = servicesSection();
   return (
     <section className={base()}>
+      <div className="wavee rotate-180"/>
       <h2 className={title()}>Meus Serviços</h2>
       <div className={row()}>
         <Card
@@ -123,6 +124,7 @@ const ServicesSection = () => {
           title="Website"
         />
       </div>
+      <div className="wavee"/>
     </section>
   );
 };
