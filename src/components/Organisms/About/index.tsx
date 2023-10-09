@@ -51,7 +51,7 @@ const About = () => {
               Ver Portfólio
             </Button>
           </div>
-          <div className="mt-10  hidden lg:block">
+          <div className="mt-4 hidden lg:block">
             <LineMenu />
           </div>
         </div>

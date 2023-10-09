@@ -8,8 +8,8 @@ const Socials = tv({
       true: 'mx-2 flex rounded-full border-[2px] border-slate-50 p-4 hover:border-[#EFEFEF] hover:text-[#EFEFEF]',
     },
     size: {
-      sm: 'flex text-4xl',
-      md: 'flex px-5 text-[40px] sm:text-[50px] xl:text-[60px]',
+      sm: 'flex text-6xl gap-3  text-white-0',
+      md: 'flex px-5 text-[40px]  sm:text-[50px] xl:text-[60px]',
     },
   },
 });

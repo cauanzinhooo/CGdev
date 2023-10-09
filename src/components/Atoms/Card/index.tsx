@@ -14,13 +14,13 @@ type CardProps = {
 
 const card = tv({
   slots: {
-    Base: 'card mx-3 h-[450px] w-[300px] rounded-md bg-green-50 sm:h-[500px] sm:w-[400px]',
-    Rotate: 'card-side front  ',
+    Base: 'card mx-3 h-[450px] w-[300px] bg-green-950 sm:h-[500px] sm:w-[400px]',
+    Rotate: 'card-side front',
     FrontCard: ' h-[500px] w-[300px] text-brown-50  sm:w-[400px]',
     SideCard: 'card-side back h-[500px] w-[300px] sm:w-[400px]',
-    IconTitle: 'mt-3 flex justify-center ',
-    Title: 'text-center text-5xl  sm:text-6xl',
-    Description: 'mx-2 text-center font-mono text-xl text-white-0 sm:text-2xl',
+    IconTitle: 'mt-3 text-green-50 flex justify-center ',
+    Title: 'text-center text-5xl text-white-0 sm:text-5xl',
+    Description: 'mx-2 mt-10 text-center font-mono text-xl text-white-0 sm:text-2xl',
   },
 });
 const Card = ({ title, iconTitle, icon, description }: CardProps) => {
@@ -40,9 +40,8 @@ const Card = ({ title, iconTitle, icon, description }: CardProps) => {
         </div>
       </ScrollAnimation>
       <div className={SideCard()}>
-        <div className="mx-auto text-brown-50 ">
+        <div className="mx-auto text-green-50 ">
           <h2 className={IconTitle()}>{iconTitle}</h2>
-          <h3 className={Title()}>{title}</h3>
           <p className={Description()}>{description}</p>
         </div>
       </div>
