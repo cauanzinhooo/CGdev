@@ -19,6 +19,7 @@ const button = tv({
     size: {
       md: 'h-[42px] px-5',
       lg: 'h-[52px] px-7',
+      xl: 'h-[60px] px-10',
     },
   },
   defaultVariants: {

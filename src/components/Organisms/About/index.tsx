@@ -8,7 +8,6 @@ import { tv } from 'tailwind-variants';
 
 import Button from '@/components/Atoms/Button';
 import LineMenu from '@/components/Atoms/LineMenu';
-// import ImageFile from '@/public/assets/images/FILES.svg';
 import ImageFiled from '@/public/assets/images/filed.gif';
 
 const aboutSection = tv({
@@ -16,11 +15,10 @@ const aboutSection = tv({
     aboutWrapper:
       'container relative  mx-auto flex flex-col lg:flex  lg:flex-row lg:justify-between',
     headingWrapper:
-      'mx-auto w-full max-w-[500px] px-1 text-center text-[42px] lg:mx-0 lg:text-left 2xl:max-w-[700px]',
-
+      'mx-auto lg:h-[700px]  w-full max-w-[700px] text-center text-[42px] lg:mx-0 lg:text-left 2xl:max-w-[700px]',
     aboutHeading:
-      ' mt-3  px-1 font-mono  text-[43px] font-bold text-[#A8BF8C] min-[500px]:text-[60px] xl:text-[80px] 2xl:text-[90px]',
-    aboutParagraf: ' z-20 px-3   text-xl text-[#414141]',
+      ' mt-3 px-1 sm:w-full font-mono font-bold text-[#A8BF8C] text-[40px]  sm:text-[80px] lg:text-[70px] xl:text-[80px] 2xl:text-[100px]',
+    aboutParagraf: ' z-20 px-1 text-xl   2xl:text-2xl text-[#414141]',
     buttonsWrapper:
       'mt-5 flex flex-col items-center gap-6 sm:flex sm:flex-row sm:justify-center lg:justify-start',
     aboutImage: 'relative mx-auto mb-3 mt-5 lg:mx-0 lg:mt-0',
@@ -46,21 +44,20 @@ const About = () => {
             habilidades e experiências.{' '}
           </p>
           <div className={buttonsWrapper()}>
-            <Button color="green" size="lg">
+            <Button color="green" size="xl">
               Contato
             </Button>
-            <Button color="green" icon={<FaChevronRight />} size="lg">
+            <Button color="green" icon={<FaChevronRight />} size="xl">
               Ver Portfólio
             </Button>
           </div>
-          <div className="mt-5  hidden lg:block">
+          <div className="mt-10  hidden lg:block">
             <LineMenu />
           </div>
         </div>
       </ScrollAnimation>
-      <ScrollAnimation animateIn="animate__fadeInUp" animateOnce>
+      <ScrollAnimation animateIn="animate__fadeInLeft" animateOnce>
         <div className={aboutImage()}>
-          {/* <Image width={700} alt="ImageFile" src={ImageFile} /> */}
           <Image width={700} alt="ImageFile" src={ImageFiled} />
         </div>
       </ScrollAnimation>
