@@ -16,10 +16,14 @@ const button = tv({
       green: 'bg-[#A8BF8C]',
       white: 'bg-[#EFEFEF] text-[#A8BF8C]',
     },
+    outlined:{
+      true: 'mx-auto flex justify-center'
+    },
     size: {
       md: 'h-[42px] px-5',
       lg: 'h-[52px] px-7',
       xl: 'h-[60px] px-10',
+      xxl: ' h-[42px] sm:h-[62px] px-4 sm:px-6 items-center text-xl sm:text-3xl ',
     },
   },
   defaultVariants: {
@@ -27,9 +31,9 @@ const button = tv({
     size: 'md',
   },
 });
-const Button = ({ color, size, icon, children, type }: ButtonProps) => {
+const Button = ({ color, outlined, size, icon, children, type }: ButtonProps) => {
   return (
-    <button type={type} className={button({ size, color })}>
+    <button type={type} className={button({ size, outlined, color })}>
       <div className="flex items-center font-mono">
         {children}
         {!!icon && icon}
