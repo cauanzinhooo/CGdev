@@ -3,6 +3,7 @@ import Header from '@/components/Molecules/Header';
 import About from '@/components/Organisms/About';
 import ContactSection from '@/components/Organisms/ContactSection';
 import ServicesSection from '@/components/Organisms/ServicesSection';
+import ShowCase from '@/components/Organisms/ShowCaseSection';
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
       <Header />
       <About />
       <ServicesSection />
+      <ShowCase/>
       <ContactSection />
       <Footer />
     </>
