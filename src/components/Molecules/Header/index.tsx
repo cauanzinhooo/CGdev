@@ -1,5 +1,5 @@
-import Image from 'next/image';
-import { useState } from 'react';
+import Image from "next/image";
+import { useState } from "react";
 import {
   FaBars,
   FaEnvelope,
@@ -7,20 +7,20 @@ import {
   FaInstagram,
   FaLinkedin,
   FaTimes,
-} from 'react-icons/fa';
-import { tv } from 'tailwind-variants';
+} from "react-icons/fa";
+import { tv } from "tailwind-variants";
 
-import LineMenu from '@/components/Atoms/LineMenu';
-import Social from '@/components/Atoms/Social';
-import Logo from '@/public/assets/images/cgdev.svg';
+import LineMenu from "@/components/Atoms/LineMenu";
+import Social from "@/components/Atoms/Social";
+import Logo from "@/public/assets/images/cgdev.svg";
 
 const header = tv({
   slots: {
-    headerFlex: 'relative h-52 w-full',
-    container: 'container mx-auto flex items-center justify-between py-6',
-    barsMenu: 'mt-2 flex items-center px-3 text-4xl text-zinc-50 lg:hidden',
-    icos: 'text-slate-100 hover:text-red-600',
-    linkIcon: 'mx-4 text-4xl no-underline hover:border-none',
+    headerFlex: "relative h-52 w-full",
+    container: "container mx-auto flex items-center justify-between py-6",
+    barsMenu: "mt-2 flex items-center px-3 text-4xl text-zinc-50 lg:hidden",
+    icos: "text-slate-100 hover:text-red-600",
+    linkIcon: "mx-4 text-4xl no-underline hover:border-none",
   },
 });
 const { headerFlex, container, barsMenu, icos, linkIcon } = header();

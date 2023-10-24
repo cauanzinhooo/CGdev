@@ -1,9 +1,9 @@
-import 'animate.css/animate.min.css';
+import "animate.css/animate.min.css";
 
 // @ts-ignore
-import ScrollAnimation from 'react-animate-on-scroll';
+import ScrollAnimation from "react-animate-on-scroll";
 // @ts-ignore
-import { tv } from 'tailwind-variants';
+import { tv } from "tailwind-variants";
 
 type CardProps = {
   title: string;
@@ -14,13 +14,14 @@ type CardProps = {
 
 const card = tv({
   slots: {
-    Base: 'card mx-3 h-[450px] w-[300px] bg-green-950 sm:h-[500px] sm:w-[400px]',
-    Rotate: 'card-side front',
-    FrontCard: ' h-[500px] w-[300px] text-brown-50  sm:w-[400px]',
-    SideCard: 'card-side back h-[500px] w-[300px] sm:w-[400px]',
-    IconTitle: 'mt-3 text-green-50 flex justify-center ',
-    Title: 'text-center text-5xl text-white-0 sm:text-5xl',
-    Description: 'mx-2 mt-10 text-center font-mono text-xl text-white-0 sm:text-2xl',
+    Base: "card mx-3 h-[450px] w-[300px] bg-green-950 sm:h-[500px] sm:w-[400px]",
+    Rotate: "card-side front",
+    FrontCard: " h-[500px] w-[300px] text-brown-50  sm:w-[400px]",
+    SideCard: "card-side back h-[500px] w-[300px] sm:w-[400px]",
+    IconTitle: "mt-3 text-green-50 flex justify-center ",
+    Title: "text-center text-5xl text-white-0 sm:text-5xl",
+    Description:
+      "mx-2 mt-10 text-center font-mono text-xl text-white-0 sm:text-2xl",
   },
 });
 const Card = ({ title, iconTitle, icon, description }: CardProps) => {

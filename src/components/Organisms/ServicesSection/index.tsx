@@ -1,82 +1,82 @@
-import { FaCheckCircle, FaDesktop, FaIdCard, FaPager } from 'react-icons/fa';
-import { tv } from 'tailwind-variants';
-import 'animate.css/animate.min.css';
+import { FaCheckCircle, FaDesktop, FaIdCard, FaPager } from "react-icons/fa";
+import { tv } from "tailwind-variants";
+import "animate.css/animate.min.css";
 
 // @ts-ignore
-import ScrollAnimation from 'react-animate-on-scroll';
+import ScrollAnimation from "react-animate-on-scroll";
 
-import Card from '@/components/Atoms/Card';
+import Card from "@/components/Atoms/Card";
 
 const LandingCaracteristics = [
   {
     id: 1,
-    label: 'Divulgação de CTA',
+    label: "Divulgação de CTA",
   },
   {
     id: 2,
-    label: 'Otimização',
+    label: "Otimização",
   },
 
   {
     id: 3,
-    label: 'Formulários',
+    label: "Formulários",
   },
 
   {
     id: 4,
-    label: 'Carregamento Rápido',
+    label: "Carregamento Rápido",
   },
 ];
 const HotCaracteristics = [
   {
     id: 1,
-    label: 'Divulgação de Evento',
+    label: "Divulgação de Evento",
   },
   {
     id: 2,
-    label: 'Cativar a Atenção',
+    label: "Cativar a Atenção",
   },
   {
     id: 3,
-    label: 'Prender o Público',
+    label: "Prender o Público",
   },
   {
     id: 4,
-    label: 'Integração com Redes',
+    label: "Integração com Redes",
   },
   {
     id: 6,
-    label: 'Carregamento Rápido',
+    label: "Carregamento Rápido",
   },
 ];
 const WebsiteCaracteristics = [
   {
     id: 1,
-    label: 'Segurança:',
+    label: "Segurança:",
   },
   {
     id: 2,
-    label: 'Responsividade',
+    label: "Responsividade",
   },
   {
     id: 3,
-    label: 'Integração Social',
+    label: "Integração Social",
   },
   {
     id: 4,
-    label: 'SEO',
+    label: "SEO",
   },
 ];
 
 const servicesSection = tv({
   slots: {
     base: `my-20 w-full bg-[#ebebeb] `,
-    wrap: 'flex items-center gap-1',
-    row: 'container mx-auto flex flex-wrap justify-center gap-10 py-24 sm:gap-32',
+    wrap: "flex items-center gap-1",
+    row: "container mx-auto flex flex-wrap justify-center gap-10 py-24 sm:gap-32",
     title: `text-center font-mono text-5xl font-bold text-green-50 after:mx-auto after:mt-3 after:block after:h-1 after:w-20
     after:bg-green-50 after:content-[''] sm:text-[70px]`,
-    icon: 'ml-4 mt-2 text-green-50',
-    caracteristics: 'mt-2 text-xl font-bold text-white-0 sm:text-2xl',
+    icon: "ml-4 mt-2 text-green-50",
+    caracteristics: "mt-2 text-xl font-bold text-white-0 sm:text-2xl",
   },
 });
 
@@ -85,10 +85,8 @@ const ServicesSection = () => {
   return (
     <section className={base()}>
       <div className="wavee rotate-180" />
-      <ScrollAnimation  animateIn="animate__fadeInLeft"
-        animateOnce>
-      <h2 className={title()}>Meus Serviços</h2>
-
+      <ScrollAnimation animateIn="animate__fadeInLeft" animateOnce>
+        <h2 className={title()}>Meus Serviços</h2>
       </ScrollAnimation>
       <div className={row()}>
         <Card
@@ -131,7 +129,6 @@ const ServicesSection = () => {
           title="Website"
         />
       </div>
-      
     </section>
   );
 };

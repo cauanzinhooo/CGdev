@@ -1,12 +1,12 @@
-import '../src/styles/global.css';
+import "../src/styles/global.css";
 
-import type { Preview } from '@storybook/react';
+import type { Preview } from "@storybook/react";
 
-export const parameters = { layout: 'fullscreen' };
+export const parameters = { layout: "fullscreen" };
 
 const preview: Preview = {
   parameters: {
-    actions: { argTypesRegex: '^on[A-Z].*' },
+    actions: { argTypesRegex: "^on[A-Z].*" },
     controls: {
       matchers: {
         color: /(background|color)$/i,

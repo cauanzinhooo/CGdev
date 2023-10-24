@@ -1,11 +1,11 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from "@storybook/react";
 
-import LineMenu from '.';
+import LineMenu from ".";
 
 export default {
-  title: 'Atoms/LineMenu',
+  title: "Atoms/LineMenu",
   component: LineMenu,
-  tags: ['autodocs'],
+  tags: ["autodocs"],
 } as Meta;
 
 type Story = StoryObj<typeof LineMenu>;
