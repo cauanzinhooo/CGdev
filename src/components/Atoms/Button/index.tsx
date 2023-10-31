@@ -10,14 +10,14 @@ export type ButtonProps = ComponentProps<'button'> &
     children: React.ReactNode;
   } & React.ButtonHTMLAttributes<HTMLButtonElement>;
 const button = tv({
-  base: 'rounded-xl font-sans text-2xl text-slate-100 duration-150 hover:border-[1px] hover:border-slate-200 hover:bg-transparent hover:text-slate-50',
+  base: ' rounded-xl font-sans text-2xl text-slate-100   hover:border-slate-200 hover:bg-green-950 hover:duration-75  ',
   variants: {
     color: {
       green: 'bg-[#A8BF8C]',
       white: 'bg-[#EFEFEF] text-[#A8BF8C]',
     },
     outlined: {
-      true: 'mx-auto flex justify-center',
+      true: 'mx-auto flex justify-center hover:bg-transparent hover:text-slate-50',
     },
     size: {
       md: 'h-[42px] px-5',

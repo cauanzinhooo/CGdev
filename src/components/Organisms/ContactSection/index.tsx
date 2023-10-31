@@ -19,7 +19,7 @@ const contactSection = tv({
     imagemWrap:
       'mx-auto flex h-[400px] w-full flex-col items-center text-center lg:mx-0 lg:h-[500px] lg:w-[450px] xl:w-[500px]',
     titleWrap:
-      ' h-[400px]   w-full  font-mono text-[#FFFCF8]  lg:m-0 lg:w-[400px] lg:justify-center xl:h-[500px] xl:w-[500px]',
+      ' h-[400px]  w-full  font-sans text-[#FFFCF8]  lg:m-0 lg:w-[400px] lg:justify-center xl:h-[500px] xl:w-[500px]',
   },
 });
 const ContactSection = () => {
