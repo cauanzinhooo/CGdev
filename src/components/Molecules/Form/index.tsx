@@ -2,7 +2,7 @@ import 'animate.css/animate.min.css';
 
 import emailjs from '@emailjs/browser';
 import { yupResolver } from '@hookform/resolvers/yup';
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 // @ts-ignore
 import ScrollAnimation from 'react-animate-on-scroll';
 import { useForm } from 'react-hook-form';
@@ -12,78 +12,98 @@ import * as yup from 'yup';
 const schema = yup
   .object({
     name: yup.string().required('Campo obrigatório'),
+    email: yup
+      .string()
+      .email('Precisa ser um e-mail válido')
+      .required('Campo obrigatório'),
+    message: yup.string().required('Campo obrigatório'),
   })
   .required();
-type FormProps = {
-  name: 'string';
-};
 
 const form = tv({
   slots: {
-    base: 'flex flex-col justify-center gap-6 lg:flex lg:flex-col lg:items-end',
+    base: 'flex flex-col justify-center gap-6 lg:flex lg:flex-col lg:items-end ',
     subtitle: `my-10 font-mono text-4xl text-green-950 after:mt-3  after:block after:h-1 after:w-20 after:bg-green-950
     after:content-['']`,
     input:
-      'mx-auto w-[565px] rounded-md bg-green-50 px-5 py-6 font-mono text-xl text-slate-50 placeholder-slate-50 lg:mx-0',
+      'w-[565px] rounded-md bg-green-50 px-5  py-6 text-right font-mono text-xl text-slate-50 placeholder-slate-50 focus:outline-none focus:ring focus:ring-green-50 active:bg-green-950 lg:mx-0',
     submit:
       ' h-[64px] w-[164px] rounded-md bg-green-950 font-mono text-2xl font-bold text-white-0 ',
   },
 });
+type FormProps = {
+  name: string;
+  email: string;
+  message: string;
+};
 
 const Form = () => {
+  const [message, setMessage] = useState('');
   const {
     register,
     handleSubmit,
+    setValue,
     formState: { errors },
   } = useForm<FormProps>({ resolver: yupResolver(schema) });
+
   const { base, subtitle, input, submit } = form();
-  const [name, Setname] = useState('');
-  const [email, Setemail] = useState('');
-  const [message, Setmessage] = useState('');
-  function SendEmail(e: any) {
-    const templateParams = {
-      from_name: name,
-      message,
-      email,
-    };
-    emailjs.send(
-      'service_eri6mxg',
-      'template_ahcd2ak',
-      templateParams,
-      'GxSF1qCjMP8PCOYag',
-    );
-  }
+  const formm = useRef(null);
+  const submitForm = (data: FormProps) => {
+    emailjs
+      .sendForm(
+        'service_bhhg1kw',
+        'template_ccyccrg',
+        formm.current!,
+        'WAK_C_0eZD0pjZXXp',
+      )
+      .then((response) => {
+        console.log(data.name);
+        data.name.trim();
+        console.log(data.name);
+        setValue('name', '');
+        setValue('email', '');
+        setValue('message', '');
+      });
+  };
   return (
-    <form onSubmit={handleSubmit(SendEmail)}>
+    <form ref={formm} onSubmit={handleSubmit(submitForm)}>
       <ScrollAnimation className={base()} animateIn="animate__fadeInLeft">
         <h2 className={subtitle()}>Saiba mais sobre o meu trabalho</h2>
         <input
-          placeholder="Seu Nome"
           className={input()}
-          onChange={(e) => Setname(e.target.value)}
+          placeholder="Seu nome"
           {...register('name')}
-          type="text"
         />
         {errors?.name && (
-          <p className="mt-4  pl-3 font-normal text-rose-600">
+          <p className="mt-1  font-normal text-rose-600">
             {errors?.name?.message}
           </p>
         )}
         <input
           className={input()}
           placeholder="Seu E-mail"
-          onChange={(e) => Setemail(e.target.value)}
-          value={email}
+          {...register('email')}
           type="email"
         />
+        {errors?.email && (
+          <p className="mt-1  font-normal text-rose-600">
+            {errors?.email?.message}
+          </p>
+        )}
         <input
           placeholder="Assunto"
           className={input()}
-          onChange={(e) => Setmessage(e.target.value)}
-          value={message}
+          {...register('message')}
           type="text"
         />
-        <input className={submit()} type="submit" />
+        {errors?.message && (
+          <p className="mt-1  font-normal text-rose-600">
+            {errors?.message?.message}
+          </p>
+        )}
+        <button className={submit()} type="submit">
+          Enviar
+        </button>
       </ScrollAnimation>
     </form>
   );

@@ -1,25 +1,27 @@
-import { tv } from "tailwind-variants";
-import FileImage from "@/public/assets/images/olive tree-rafiki.svg";
-import Image from "next/image";
-import "animate.css/animate.min.css";
-import Next from "@/public/assets/images/next.png";
-import JS from "@/public/assets/images/JS.png";
-import CSS from "@/public/assets/images/CSS.png";
-import TailwindImage from "@/public/assets/images/tailwind.svg";
-import ReactImage from "@/public/assets/images/React.png";
+import 'animate.css/animate.min.css';
+
+import Image from 'next/image';
 // @ts-ignore
-import ScrollAnimation from "react-animate-on-scroll";
-import Tec from "@/components/Atoms/Tec";
+import ScrollAnimation from 'react-animate-on-scroll';
+import { tv } from 'tailwind-variants';
+
+import Tec from '@/components/Atoms/Tec';
+import CSS from '@/public/assets/images/CSS.png';
+import JS from '@/public/assets/images/JS.png';
+import Next from '@/public/assets/images/next.png';
+import FileImage from '@/public/assets/images/olive tree-rafiki.svg';
+import ReactImage from '@/public/assets/images/React.png';
+import TailwindImage from '@/public/assets/images/tailwind.svg';
 
 const showCase = tv({
   slots: {
-    base: "",
-    wrap: "container flex justify-between  mx-auto h-[800px]",
-    row: "w-[750px]  flex flex-col justify-center font-mono text-white-0",
-    row1: "flex flex-wrap w-[750px]",
-    title: `text-6xl text-green-950 font-mono font-bold  text-center after:mx-auto after:mt-3 after:block after:h-1 after:w-20
+    base: '',
+    wrap: 'container mx-auto flex  h-[800px] justify-between',
+    row: 'flex  w-[750px] flex-col justify-center font-mono text-white-0',
+    row1: 'flex w-[750px] flex-wrap',
+    title: `text-center font-serif text-6xl font-bold  text-green-950 after:mx-auto after:mt-3 after:block after:h-1 after:w-20
     after:bg-green-950 after:content-['']`,
-    tecs: "w-[150px] h-[150px]",
+    tecs: 'h-[150px] w-[150px]',
   },
 });
 const ShowCase = () => {
