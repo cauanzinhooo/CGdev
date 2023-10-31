@@ -1,17 +1,19 @@
-import Form from "@/components/Molecules/Form";
-import { tv } from "tailwind-variants";
-import ChecklistImage from "@/public/assets/images/Mailbox-amico (1).svg";
-import Image from "next/image";
-import "animate.css/animate.min.css";
+import 'animate.css/animate.min.css';
 
+import Image from 'next/image';
 // @ts-ignore
-import ScrollAnimation from "react-animate-on-scroll";
+import ScrollAnimation from 'react-animate-on-scroll';
+import { tv } from 'tailwind-variants';
+
+import Form from '@/components/Molecules/Form';
+import ChecklistImage from '@/public/assets/images/Mailbox-amico (1).svg';
+
 const formSection = tv({
   slots: {
-    wrap: "bg-[#ebebeb] w-full py-26 my-20",
-    title: `text-[70px] mb-20 text-center font-mono font-bold  text-green-50 after:mx-auto after:mt-3 after:block after:h-1 after:w-20
-    after:bg-green-50 after:content-['']`,
-    base: "container mx-auto lg:flex lg:justify-between ",
+    wrap: 'my-20 w-full bg-[#ebebeb] ',
+    title: `mb-5 text-center  font-sans  text-[70px] font-bold  text-green-50 after:mx-auto after:mt-3 after:flex after:h-1 after:w-20 after:bg-green-50 
+    after:content-[''] lg:mb-20`,
+    base: 'container mx-auto flex flex-col-reverse items-center lg:flex lg:flex-row lg:justify-between ',
   },
 });
 

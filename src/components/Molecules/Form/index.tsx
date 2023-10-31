@@ -2,7 +2,7 @@ import 'animate.css/animate.min.css';
 
 import emailjs from '@emailjs/browser';
 import { yupResolver } from '@hookform/resolvers/yup';
-import React, { useRef, useState } from 'react';
+import React, { useRef } from 'react';
 // @ts-ignore
 import ScrollAnimation from 'react-animate-on-scroll';
 import { useForm } from 'react-hook-form';
@@ -22,13 +22,13 @@ const schema = yup
 
 const form = tv({
   slots: {
-    base: 'flex flex-col justify-center gap-6 lg:flex lg:flex-col lg:items-end ',
-    subtitle: `my-10 font-mono text-4xl text-green-950 after:mt-3  after:block after:h-1 after:w-20 after:bg-green-950
-    after:content-['']`,
+    base: 'flex flex-col items-center gap-6 lg:flex lg:flex-col lg:items-end ',
+    subtitle: `my-10 flex flex-col items-center text-center font-sans text-4xl text-green-950 after:mt-3 after:block after:h-1  after:w-20 after:bg-green-950 after:content-[''] lg:items-end
+    lg:text-right `,
     input:
-      'w-[565px] rounded-md bg-green-50 px-5  py-6 text-right font-mono text-xl text-slate-50 placeholder-slate-50 focus:outline-none focus:ring focus:ring-green-50 active:bg-green-950 lg:mx-0',
+      'w-full max-w-[565px] rounded-md bg-green-50 px-5  py-6  text-left font-sans text-xl text-slate-50 placeholder-slate-50 focus:outline-none focus:ring focus:ring-green-50 active:bg-green-950 lg:mx-0 lg:text-right',
     submit:
-      ' h-[64px] w-[164px] rounded-md bg-green-950 font-mono text-2xl font-bold text-white-0 ',
+      ' h-[64px] w-[164px] rounded-md bg-green-950 font-sans text-2xl font-bold text-white-0 ',
   },
 });
 type FormProps = {
@@ -38,7 +38,6 @@ type FormProps = {
 };
 
 const Form = () => {
-  const [message, setMessage] = useState('');
   const {
     register,
     handleSubmit,
@@ -48,7 +47,7 @@ const Form = () => {
 
   const { base, subtitle, input, submit } = form();
   const formm = useRef(null);
-  const submitForm = (data: FormProps) => {
+  const submitForm = () => {
     emailjs
       .sendForm(
         'service_bhhg1kw',
@@ -56,17 +55,18 @@ const Form = () => {
         formm.current!,
         'WAK_C_0eZD0pjZXXp',
       )
-      .then((response) => {
-        console.log(data.name);
-        data.name.trim();
-        console.log(data.name);
+      .then(() => {
         setValue('name', '');
         setValue('email', '');
         setValue('message', '');
       });
   };
   return (
-    <form ref={formm} onSubmit={handleSubmit(submitForm)}>
+    <form
+      className="mt-12 px-2"
+      ref={formm}
+      onSubmit={handleSubmit(submitForm)}
+    >
       <ScrollAnimation className={base()} animateIn="animate__fadeInLeft">
         <h2 className={subtitle()}>Saiba mais sobre o meu trabalho</h2>
         <input

@@ -1,15 +1,15 @@
-import { FaEnvelope, FaWhatsapp } from "react-icons/fa";
-import { tv } from "tailwind-variants";
+import { FaEnvelope, FaWhatsapp } from 'react-icons/fa';
+import { tv } from 'tailwind-variants';
 
 const footer = tv({
   slots: {
-    footerWrapper: "mt-20 w-full bg-[#405230]",
+    footerWrapper: 'mt-20 w-full bg-[#405230]',
     footerContainer:
-      "container mx-auto flex flex-col gap-2 lg:flex lg:flex-row lg:gap-5 ",
-    iconsWrapper: "flex items-center gap-2 text-2xl  text-slate-50",
-    iconsColor: "text-lg text-[#EFEFEF;]",
-    utilityWrapper: "flex flex-col justify-center py-3 text-center lg:py-5",
-    utilityLi: "text-4xl text-slate-50",
+      'container mx-auto flex flex-col gap-2 lg:flex lg:flex-row lg:gap-5 ',
+    iconsWrapper: 'flex items-center gap-2 text-2xl  text-slate-50',
+    iconsColor: 'text-lg text-[#EFEFEF;]',
+    utilityWrapper: 'flex flex-col justify-center py-3 text-center lg:py-5',
+    utilityLi: 'text-4xl text-slate-50',
   },
 });
 
@@ -25,18 +25,18 @@ const {
 const utilityLinks = [
   {
     id: 1,
-    label: "Portfólio",
-    href: "https://www.instagram.com",
+    label: 'Portfólio',
+    href: 'https://www.instagram.com',
   },
   {
     id: 2,
-    label: "Contato",
-    href: "",
+    label: 'Contato',
+    href: '',
   },
   {
     id: 3,
-    label: "Enviar Mensagem",
-    href: "",
+    label: 'Enviar Mensagem',
+    href: '',
   },
 ];
 const Footer = () => {

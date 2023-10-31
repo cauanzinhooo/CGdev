@@ -21,7 +21,7 @@ const card = tv({
     IconTitle: 'mt-3 flex justify-center text-green-50 ',
     Title: 'text-center text-5xl text-white-0 sm:text-5xl',
     Description:
-      'mx-2 mt-10 text-center font-mono text-xl text-white-0 sm:text-2xl',
+      'mx-2 mt-10 text-center font-sans text-xl text-white-0 sm:text-2xl',
   },
 });
 const Card = ({ title, iconTitle, icon, description }: CardProps) => {

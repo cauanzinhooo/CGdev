@@ -17,7 +17,7 @@ const showCase = tv({
   slots: {
     base: '',
     wrap: 'container mx-auto flex  h-[800px] justify-between',
-    row: 'flex  w-[750px] flex-col justify-center font-mono text-white-0',
+    row: 'flex  w-[750px] flex-col justify-center font-sans text-white-0',
     row1: 'flex w-[750px] flex-wrap',
     title: `text-center font-serif text-6xl font-bold  text-green-950 after:mx-auto after:mt-3 after:block after:h-1 after:w-20
     after:bg-green-950 after:content-['']`,
