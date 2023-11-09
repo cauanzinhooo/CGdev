@@ -4,7 +4,7 @@ import About from '@/components/Organisms/About';
 import ContactSection from '@/components/Organisms/ContactSection';
 import FormSection from '@/components/Organisms/FormSection';
 import ServicesSection from '@/components/Organisms/ServicesSection';
-import ShowCase from '@/components/Organisms/ShowCaseSection';
+import StackSection from '@/components/Organisms/StackSection';
 
 const Home = () => {
   return (
@@ -12,7 +12,7 @@ const Home = () => {
       <Header />
       <About />
       <ServicesSection />
-      <ShowCase />
+      <StackSection />
       <FormSection />
       <ContactSection />
       <Footer />
