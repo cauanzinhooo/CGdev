@@ -12,7 +12,7 @@ import { tv } from 'tailwind-variants';
 
 import LineMenu from '@/components/Atoms/LineMenu';
 import Social from '@/components/Atoms/Social';
-import Logo from '@/public/assets/images/cgdev.svg';
+import LogoCG from '@/public/assets/images/cgDev.svg';
 
 const header = tv({
   slots: {
@@ -36,7 +36,7 @@ const Header = () => {
             width={300}
             height={300}
             alt="IMAGE"
-            src={Logo}
+            src={LogoCG}
           />
           <Social size="sm" />
           <div className={barsMenu()}>
