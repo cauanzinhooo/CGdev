@@ -17,8 +17,8 @@ const aboutSection = tv({
     headingWrapper:
       'mx-auto w-full  max-w-[700px] text-center text-[42px] lg:mx-0 lg:h-[700px] lg:text-left 2xl:max-w-[700px]',
     aboutHeading:
-      ' mt-3 px-1 font-sans text-[40px] font-bold text-[#A8BF8C] sm:w-full  sm:text-[80px] lg:text-[70px] xl:text-[80px] 2xl:text-[100px]',
-    aboutParagraf: ' z-20 px-2 font-sans text-xl   text-[#414141] 2xl:text-2xl',
+      ' mt-3 font-sans text-[40px] font-bold text-[#A8BF8C] sm:w-full  sm:text-[80px] lg:text-[70px] xl:text-[80px] 2xl:text-[100px]',
+    aboutParagraf: ' z-20 px-1 font-sans text-xl   text-[#414141] 2xl:text-2xl',
     buttonsWrapper:
       'mt-5 flex flex-col items-center gap-6 sm:flex sm:flex-row sm:justify-center lg:justify-start',
     aboutImage: 'relative mx-auto mb-3 mt-5 lg:mx-0 lg:mt-0',

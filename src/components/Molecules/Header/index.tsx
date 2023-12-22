@@ -12,7 +12,7 @@ import { tv } from 'tailwind-variants';
 
 import LineMenu from '@/components/Atoms/LineMenu';
 import Social from '@/components/Atoms/Social';
-import LogoCG from '@/public/assets/images/cgDev.svg';
+import LogoCG from '@/public/assets/images/cgDev 1.svg';
 
 const header = tv({
   slots: {
