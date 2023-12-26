@@ -12,11 +12,11 @@ import { tv } from 'tailwind-variants';
 
 import LineMenu from '@/components/Atoms/LineMenu';
 import Social from '@/components/Atoms/Social';
-import LogoCG from '@/public/assets/images/cgDev 1.svg';
+import LogoCG from '@/public/assets/images/cgDev.svg';
 
 const header = tv({
   slots: {
-    headerFlex: 'relative h-52 w-full',
+    headerFlex: ' relative w-full',
     container: 'container mx-auto flex items-center justify-between py-6',
     barsMenu: 'mt-2 flex items-center px-3 text-4xl text-zinc-50 lg:hidden',
     icos: 'text-slate-100 hover:text-red-600',
@@ -29,12 +29,12 @@ const Header = () => {
   return (
     <header className={headerFlex()}>
       <div className=" sexosexo z-0" />
-      <div className=" relative z-20 border-b-[0.5px] border-slate-100">
+      <div className=" relative z-20 border-b-[0.5px]  border-white-0">
         <div className={container()}>
           <Image
-            className="px-3"
-            width={300}
-            height={300}
+            className=""
+            width={200}
+            height={200}
             alt="IMAGE"
             src={LogoCG}
           />

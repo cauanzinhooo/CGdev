@@ -7,21 +7,20 @@ import { FaChevronRight } from 'react-icons/fa';
 import { tv } from 'tailwind-variants';
 
 import Button from '@/components/Atoms/Button';
-import LineMenu from '@/components/Atoms/LineMenu';
 import aboutimage from '@/public/assets/images/aboutImage2.svg';
 
 const aboutSection = tv({
   slots: {
     aboutWrapper:
-      'container relative  mx-auto flex flex-col lg:flex  lg:flex-row lg:justify-between',
-    headingWrapper:
-      'mx-auto w-full  max-w-[700px] text-center text-[42px] lg:mx-0 lg:h-[700px] lg:text-left 2xl:max-w-[700px]',
+      'container relative mx-auto flex flex-col pb-10 lg:flex lg:flex-row lg:justify-between',
+    headingWrapper: ' w-full text-center text-[42px] lg:mx-0  lg:text-left ',
     aboutHeading:
-      ' mt-3 font-sans text-[40px] font-bold text-[#A8BF8C] sm:w-full  sm:text-[80px] lg:text-[70px] xl:text-[80px] 2xl:text-[100px]',
-    aboutParagraf: ' z-20 px-1 font-sans text-xl   text-[#414141] 2xl:text-2xl',
+      ' mx-auto text-center font-serif text-[45px] font-bold text-green-50 md:text-[55px] lg:mx-0 lg:mt-10 lg:max-w-[700px] lg:text-left',
+    aboutParagraf:
+      'z-20 mx-auto flex max-w-[600px] px-1  font-serif  text-base text-white-0 lg:mx-0',
     buttonsWrapper:
       'mt-5 flex flex-col items-center gap-6 sm:flex sm:flex-row sm:justify-center lg:justify-start',
-    aboutImage: 'relative mx-auto mb-3 mt-5 lg:mx-0 lg:mt-0',
+    aboutImage: 'relative flex justify-center',
   },
 });
 const {
@@ -37,34 +36,30 @@ const About = () => {
     <main className={aboutWrapper()}>
       <ScrollAnimation animateIn="animate__fadeInLeft" animateOnce>
         <div className={headingWrapper()}>
-          <h1 className={aboutHeading()}>Desenvolvedor Front-end</h1>
+          <h1 className={aboutHeading()}>Desenvolvedor Web</h1>
           <p className={aboutParagraf()}>
-            Meu nome é Cauã Gomes Marçal, atuo como desenvolvedor front-end a 1
-            ano e meio. Neste portfólio, gostaria de compartilhar com você uma
-            amostra do meu trabalho e destacar minhas habilidades e
-            experiências.{' '}
+            Olá, me chamo Cauã Gomes Marçal, um entusiasta da arte da
+            programação atuando como desenvolvedor front-end há dois anos e
+            meio. Neste espaço, tenho o prazer de compartilhar uma amostra do
+            meu trabalho, onde vejo a programação não apenas como uma habilidade
+            técnica, mas como uma verdadeira expressão artística. Ao longo da
+            minha jornada, tenho dedicado meu tempo e esforço para aprimorar
+            minhas habilidades e aprofundar minha compreensão da criação visual
+            e interativa na web.{' '}
           </p>
           <div className={buttonsWrapper()}>
-            <Button color="green" size="xl">
+            <Button color="black" size="md">
               Contato
             </Button>
-            <Button color="green" icon={<FaChevronRight />} size="xl">
+            <Button color="green" icon={<FaChevronRight />} size="md">
               Ver Portfólio
             </Button>
-          </div>
-          <div className="mt-4 hidden lg:block">
-            <LineMenu />
           </div>
         </div>
       </ScrollAnimation>
       <ScrollAnimation animateIn="animate__fadeInDown" animateOnce>
         <div className={aboutImage()}>
-          <Image
-            className="rotate-[]"
-            width={750}
-            alt="ImageFile"
-            src={aboutimage}
-          />
+          <Image width={600} alt="ImageFile" src={aboutimage} />
         </div>
       </ScrollAnimation>
     </main>

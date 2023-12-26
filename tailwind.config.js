@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     fontFamily: {
       sans: 'Helvetica, Arial, sans-serif',
-      serif: 'Calibri',
+      serif: ['monospace'],
     },
     fontSize: {
       xs: '0.75rem',
@@ -27,7 +27,7 @@ module.exports = {
           0: '#FFFCF8',
         },
         green: {
-          50: '#A8BF8C',
+          50: '#C4D352',
           950: '#405230',
         },
         gray: {

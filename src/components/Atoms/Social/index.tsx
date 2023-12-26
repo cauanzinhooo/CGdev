@@ -9,7 +9,7 @@ const Socials = tv({
       true: 'flex rounded-full border-[2px] border-slate-50 p-5 hover:border-[#EFEFEF] hover:text-[#EFEFEF]',
     },
     size: {
-      sm: 'flex gap-5 text-6xl  text-green-50',
+      sm: 'flex gap-5 text-4xl  text-white-0',
       md: 'flex justify-center gap-5 text-[50px]  sm:text-[60px] xl:text-[70px]',
     },
   },

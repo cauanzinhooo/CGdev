@@ -3,9 +3,8 @@ import { tv } from 'tailwind-variants';
 
 const Navegation = tv({
   slots: {
-    base: `relative ml-1 block font-sans text-2xl  text-slate-50 after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-10 after:-translate-x-full after:bg-[#405230;] after:opacity-0 after:transition-all after:content-[''] hover:after:translate-x-0  hover:after:opacity-100 lg:text-[#414141]`,
-    baseRow:
-      'mx-auto mt-3 flex flex-col items-center gap-12 lg:flex   lg:flex-row',
+    base: `relative my-auto text-2xl  after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-10 after:-translate-x-full after:bg-[#C4D352] after:opacity-0 after:transition-all after:content-[''] hover:after:translate-x-0  hover:after:opacity-100 lg:text-green-50`,
+    baseRow: 'mx-auto  flex items-center justify-center gap-12 ',
   },
 });
 
@@ -33,17 +32,19 @@ const navegation = [
 const LineMenu = () => {
   const { base, baseRow } = Navegation();
   return (
-    <div className={baseRow()}>
-      {navegation.map((item: any) => (
-        <ul key={item.id}>
-          <li>
-            <a className={base()} href={item.href}>
-              {item.label}
-            </a>
-          </li>
-        </ul>
-      ))}
-    </div>
+    <nav className="relative mt-1 h-11 w-full border-b-[0.5px]  border-slate-100 ">
+      <div className={baseRow()}>
+        {navegation.map((item: any) => (
+          <ul key={item.id}>
+            <li>
+              <a className={base()} href={item.href}>
+                {item.label}
+              </a>
+            </li>
+          </ul>
+        ))}
+      </div>
+    </nav>
   );
 };
 
