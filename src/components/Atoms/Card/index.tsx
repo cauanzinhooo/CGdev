@@ -1,7 +1,6 @@
 import 'animate.css/animate.min.css';
 
 // @ts-ignore
-import ScrollAnimation from 'react-animate-on-scroll';
 // @ts-ignore
 import { tv } from 'tailwind-variants';
 
@@ -14,14 +13,13 @@ type CardProps = {
 
 const card = tv({
   slots: {
-    Base: 'card mx-3 h-[450px] w-[300px] bg-green-950 sm:h-[500px] sm:w-[400px]',
+    Base: 'card mx-1 h-[450px] w-[300px] bg-green-950 sm:h-[420px] sm:w-[400px]',
     Rotate: 'card-side front',
-    FrontCard: ' h-[500px] w-[300px] text-brown-50  sm:w-[400px]',
+    FrontCard: ' h-[420px] w-[300px] text-brown-50  sm:w-[400px]',
     SideCard: 'card-side back h-[500px] w-[300px] sm:w-[400px]',
     IconTitle: 'mt-3 flex justify-center text-green-50 ',
-    Title: 'text-center text-5xl text-white-0 sm:text-5xl',
-    Description:
-      'mx-2 mt-10 text-center font-sans text-xl text-white-0 sm:text-2xl',
+    Title: 'text-center font-serif text-3xl text-white-0',
+    Description: ' mx-2 mt-10 text-center font-serif text-xl text-white-0',
   },
 });
 const Card = ({ title, iconTitle, icon, description }: CardProps) => {
@@ -29,17 +27,13 @@ const Card = ({ title, iconTitle, icon, description }: CardProps) => {
     card();
   return (
     <div className={Base()}>
-      <ScrollAnimation
-        className={Rotate()}
-        animateIn="animate__fadeInLeft"
-        animateOnce
-      >
+      <div className={Rotate()}>
         <div className={FrontCard()}>
           <h2 className={IconTitle()}>{iconTitle}</h2>
           <h3 className={Title()}>{title}</h3>
           {icon}
         </div>
-      </ScrollAnimation>
+      </div>
       <div className={SideCard()}>
         <div className="mx-auto text-green-50 ">
           <h2 className={IconTitle()}>{iconTitle}</h2>

@@ -22,8 +22,8 @@ const schema = yup
 
 const form = tv({
   slots: {
-    base: 'flex flex-col items-center gap-6 lg:flex lg:flex-col lg:items-end ',
-    subtitle: `my-10 flex flex-col items-center text-center font-sans text-4xl text-green-950 after:mt-3 after:block after:h-1  after:w-20 after:bg-green-950 after:content-[''] lg:items-end
+    base: 'flex flex-col items-center justify-center gap-6 bg-red-300  ',
+    subtitle: `my-10 flex flex-col items-center text-center font-sans text-4xl text-green-950 after:mt-3 after:block after:h-1  after:w-20 after:bg-green-950 after:content-[''] lg:items-center
     lg:text-right `,
     input:
       'w-full max-w-[565px] rounded-md bg-green-50 px-5  py-6  text-left font-sans text-xl text-slate-50 placeholder-slate-50 focus:outline-none focus:ring focus:ring-green-50 active:bg-green-950 lg:mx-0 lg:text-right',

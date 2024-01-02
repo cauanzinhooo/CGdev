@@ -11,14 +11,13 @@ import {
 import { tv } from 'tailwind-variants';
 
 import LineMenu from '@/components/Atoms/LineMenu';
-import Social from '@/components/Atoms/Social';
 import LogoCG from '@/public/assets/images/cgDev.svg';
 
 const header = tv({
   slots: {
     headerFlex: ' relative w-full',
-    container: 'container mx-auto flex items-center justify-between py-6',
-    barsMenu: 'mt-2 flex items-center px-3 text-4xl text-zinc-50 lg:hidden',
+    container: 'container mx-auto flex items-center justify-between py-4',
+    barsMenu: ' flex items-center px-3 text-4xl text-zinc-50 lg:hidden',
     icos: 'text-slate-100 hover:text-red-600',
     linkIcon: 'mx-4 text-4xl no-underline hover:border-none',
   },
@@ -32,13 +31,15 @@ const Header = () => {
       <div className=" relative z-20 border-b-[0.5px]  border-white-0">
         <div className={container()}>
           <Image
-            className=""
+            className="mt-4  "
             width={200}
             height={200}
             alt="IMAGE"
             src={LogoCG}
           />
-          <Social size="sm" />
+          <div className="hidden lg:flex">
+            <LineMenu />
+          </div>
           <div className={barsMenu()}>
             <button onClick={() => setOpenMenu(true)} type="button">
               <FaBars size={50} />

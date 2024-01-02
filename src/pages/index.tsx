@@ -1,10 +1,10 @@
 import Footer from '@/components/Molecules/Footer';
 import Header from '@/components/Molecules/Header';
-import About from '@/components/Organisms/About';
-import ContactSection from '@/components/Organisms/ContactSection';
-import FormSection from '@/components/Organisms/FormSection';
-import ServicesSection from '@/components/Organisms/ServicesSection';
-import StackSection from '@/components/Organisms/StackSection';
+import About from '@/components/Section/About';
+import ContactSection from '@/components/Section/ContactSection';
+import FormSection from '@/components/Section/FormSection';
+import ServicesSection from '@/components/Section/ServicesSection';
+import StackSection from '@/components/Section/StackSection';
 
 const Home = () => {
   return (
