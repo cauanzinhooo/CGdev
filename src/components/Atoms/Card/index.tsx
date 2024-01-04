@@ -13,13 +13,13 @@ type CardProps = {
 
 const card = tv({
   slots: {
-    Base: 'card mx-1 h-[450px] w-[300px] bg-green-950 sm:h-[420px] sm:w-[400px]',
+    Base: 'card mx-1 h-[450px] w-[330px] rounded-lg bg-green-950 shadow-lg shadow-green-950 sm:h-[450px] sm:w-[330px]',
     Rotate: 'card-side front',
-    FrontCard: ' h-[420px] w-[300px] text-brown-50  sm:w-[400px]',
-    SideCard: 'card-side back h-[500px] w-[300px] sm:w-[400px]',
-    IconTitle: 'mt-3 flex justify-center text-green-50 ',
-    Title: 'text-center font-serif text-3xl text-white-0',
-    Description: ' mx-2 mt-10 text-center font-serif text-xl text-white-0',
+    FrontCard: ' h-[450px] w-[330px] text-brown-50  sm:w-[330px]',
+    SideCard: 'card-side back h-[450px] w-[330px] sm:w-[330px]',
+    IconTitle: 'mt-5 flex justify-center text-green-50 ',
+    Title: 'mt-3 text-center font-serif text-2xl text-white-0',
+    Description: ' mx-2 mt-5 text-center font-serif text-xl text-white-0',
   },
 });
 const Card = ({ title, iconTitle, icon, description }: CardProps) => {

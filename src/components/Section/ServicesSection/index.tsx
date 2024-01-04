@@ -70,13 +70,13 @@ const WebsiteCaracteristics = [
 
 const servicesSection = tv({
   slots: {
-    base: `mt-24 w-full bg-[#ebebeb] `,
+    base: `my-20 w-full  py-16 `,
     wrap: 'flex items-center gap-1',
-    row: 'container mx-auto flex flex-wrap justify-center gap-10 py-16 sm:gap-32',
+    row: 'container mx-auto flex flex-wrap justify-center gap-10 py-16 sm:gap-24',
     title: `text-center font-serif text-[45px]  font-bold text-green-50 after:mx-auto after:mt-3 after:block after:h-1 after:w-20
     after:bg-green-50 after:content-[''] sm:text-[55px]`,
-    icon: ' ml-2 mt-2 text-green-50 sm:ml-10',
-    caracteristics: 'mt-2 font-serif text-xl text-white-0 ',
+    icon: ' ml-1 mt-4 text-green-50 sm:ml-8',
+    caracteristics: 'mt-4 font-serif text-lg text-white-0 ',
   },
 });
 
@@ -94,7 +94,7 @@ const ServicesSection = () => {
             description="Uma landing page é uma página da web altamente 
           focada e otimizada, projetada para direcionar a atenção 
           dos visitantes para uma oferta específica."
-            iconTitle={<FaIdCard size={90} />}
+            iconTitle={<FaIdCard size={80} />}
             icon={LandingCaracteristics.map((item) => (
               <ul className={wrap()} key={item.id}>
                 <FaCheckCircle className={icon()} size={30} />
@@ -109,7 +109,7 @@ const ServicesSection = () => {
             description="Um hot site é uma página da web temporária e altamente 
           especializada criada para promover algo específico, como um evento, produto, serviço, 
           campanha ou oferta por tempo limitado. "
-            iconTitle={<FaPager size={90} />}
+            iconTitle={<FaPager size={80} />}
             icon={HotCaracteristics.map((item) => (
               <ul className={wrap()} key={item.id}>
                 <FaCheckCircle className={icon()} size={30} />
@@ -124,7 +124,7 @@ const ServicesSection = () => {
             description="Um website é um conjunto de páginas da web interconectadas em um 
           domínio específico  que formam uma presença online coesa para 
           uma pessoa, empresa, organização ou entidade."
-            iconTitle={<FaDesktop size={90} />}
+            iconTitle={<FaDesktop size={80} />}
             icon={WebsiteCaracteristics.map((item) => (
               <ul className={wrap()} key={item.id}>
                 <FaCheckCircle className={icon()} size={30} />

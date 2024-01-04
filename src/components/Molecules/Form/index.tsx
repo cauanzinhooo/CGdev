@@ -22,13 +22,11 @@ const schema = yup
 
 const form = tv({
   slots: {
-    base: 'flex flex-col items-center justify-center gap-6 bg-red-300  ',
-    subtitle: `my-10 flex flex-col items-center text-center font-sans text-4xl text-green-950 after:mt-3 after:block after:h-1  after:w-20 after:bg-green-950 after:content-[''] lg:items-center
-    lg:text-right `,
+    base: 'flex flex-col items-center justify-center gap-6',
     input:
-      'w-full max-w-[565px] rounded-md bg-green-50 px-5  py-6  text-left font-sans text-xl text-slate-50 placeholder-slate-50 focus:outline-none focus:ring focus:ring-green-50 active:bg-green-950 lg:mx-0 lg:text-right',
+      'w-[500px] rounded-md bg-green-950 px-5  py-6  text-left font-serif text-xl text-white-0 placeholder-slate-50 focus:outline-none focus:ring focus:ring-green-50 active:bg-green-950 lg:mx-0 ',
     submit:
-      ' h-[64px] w-[164px] rounded-md bg-green-950 font-sans text-2xl font-bold text-white-0 ',
+      ' h-[64px] w-[164px] rounded-md bg-green-100 font-sans text-2xl font-bold text-white-0 ',
   },
 });
 type FormProps = {
@@ -63,48 +61,55 @@ const Form = () => {
   };
   return (
     <form
-      className="mt-12 px-2"
+      className="mt-14 px-2"
       ref={formm}
       onSubmit={handleSubmit(submitForm)}
     >
-      <ScrollAnimation className={base()} animateIn="animate__fadeInLeft">
-        <h2 className={subtitle()}>Saiba mais sobre o meu trabalho</h2>
-        <input
-          className={input()}
-          placeholder="Seu nome"
-          {...register('name')}
-        />
+      <div className={base()}>
+        <ScrollAnimation className={base()} animateIn="animate__fadeInLeft">
+          <input
+            className={input()}
+            placeholder="Seu nome"
+            {...register('name')}
+          />
+        </ScrollAnimation>
         {errors?.name && (
           <p className="mt-1  font-normal text-rose-600">
             {errors?.name?.message}
           </p>
         )}
-        <input
-          className={input()}
-          placeholder="Seu E-mail"
-          {...register('email')}
-          type="email"
-        />
+        <ScrollAnimation className={base()} animateIn="animate__fadeInDown">
+          <input
+            className={input()}
+            placeholder="Seu E-mail"
+            {...register('email')}
+            type="email"
+          />
+        </ScrollAnimation>
         {errors?.email && (
           <p className="mt-1  font-normal text-rose-600">
             {errors?.email?.message}
           </p>
         )}
-        <input
-          placeholder="Assunto"
-          className={input()}
-          {...register('message')}
-          type="text"
-        />
+        <ScrollAnimation className={base()} animateIn="animate__fadeInLeft">
+          <input
+            placeholder="Assunto"
+            className={input()}
+            {...register('message')}
+            type="text"
+          />
+        </ScrollAnimation>
         {errors?.message && (
           <p className="mt-1  font-normal text-rose-600">
             {errors?.message?.message}
           </p>
         )}
-        <button className={submit()} type="submit">
-          Enviar
-        </button>
-      </ScrollAnimation>
+        <ScrollAnimation className={base()} animateIn="animate__fadeInLeft">
+          <button className={submit()} type="submit">
+            Enviar
+          </button>
+        </ScrollAnimation>
+      </div>
     </form>
   );
 };
