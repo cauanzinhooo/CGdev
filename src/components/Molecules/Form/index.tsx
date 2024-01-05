@@ -1,11 +1,13 @@
 import 'animate.css/animate.min.css';
+import 'react-toastify/dist/ReactToastify.css';
 
 import emailjs from '@emailjs/browser';
 import { yupResolver } from '@hookform/resolvers/yup';
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 // @ts-ignore
 import ScrollAnimation from 'react-animate-on-scroll';
 import { useForm } from 'react-hook-form';
+import { toast, ToastContainer } from 'react-toastify';
 import { tv } from 'tailwind-variants';
 import * as yup from 'yup';
 
@@ -36,6 +38,8 @@ type FormProps = {
 };
 
 const Form = () => {
+  const [isSubmit, setIsSubmit] = useState(false);
+
   const {
     register,
     handleSubmit,
@@ -43,74 +47,100 @@ const Form = () => {
     formState: { errors },
   } = useForm<FormProps>({ resolver: yupResolver(schema) });
 
-  const { base, subtitle, input, submit } = form();
+  const { base, input, submit } = form();
   const formm = useRef(null);
-  const submitForm = () => {
-    emailjs
-      .sendForm(
+  const submitForm = async () => {
+    setIsSubmit(true);
+    try {
+      emailjs.sendForm(
         'service_bhhg1kw',
         'template_ccyccrg',
         formm.current!,
         'WAK_C_0eZD0pjZXXp',
-      )
-      .then(() => {
-        setValue('name', '');
-        setValue('email', '');
-        setValue('message', '');
+      );
+      setValue('name', '');
+      setValue('email', '');
+      setValue('message', '');
+      toast.success('Formulário Enviado !', {
+        position: toast.POSITION.TOP_RIGHT,
       });
+    } catch (error) {
+      toast.error('Erro ao enviar Formulário !', {
+        position: toast.POSITION.TOP_RIGHT,
+      });
+    } finally {
+      await new Promise((resolve) => setTimeout(resolve, 3000));
+      setIsSubmit(false);
+    }
   };
   return (
-    <form
-      className="mt-14 px-2"
-      ref={formm}
-      onSubmit={handleSubmit(submitForm)}
-    >
-      <div className={base()}>
-        <ScrollAnimation className={base()} animateIn="animate__fadeInLeft">
-          <input
-            className={input()}
-            placeholder="Seu nome"
-            {...register('name')}
-          />
-        </ScrollAnimation>
-        {errors?.name && (
-          <p className="mt-1  font-normal text-rose-600">
-            {errors?.name?.message}
-          </p>
-        )}
-        <ScrollAnimation className={base()} animateIn="animate__fadeInDown">
-          <input
-            className={input()}
-            placeholder="Seu E-mail"
-            {...register('email')}
-            type="email"
-          />
-        </ScrollAnimation>
-        {errors?.email && (
-          <p className="mt-1  font-normal text-rose-600">
-            {errors?.email?.message}
-          </p>
-        )}
-        <ScrollAnimation className={base()} animateIn="animate__fadeInLeft">
-          <input
-            placeholder="Assunto"
-            className={input()}
-            {...register('message')}
-            type="text"
-          />
-        </ScrollAnimation>
-        {errors?.message && (
-          <p className="mt-1  font-normal text-rose-600">
-            {errors?.message?.message}
-          </p>
-        )}
-        <ScrollAnimation className={base()} animateIn="animate__fadeInLeft">
-          <button className={submit()} type="submit">
-            Enviar
-          </button>
-        </ScrollAnimation>
-      </div>
-    </form>
+    <>
+      <form
+        className="mt-14 px-2"
+        ref={formm}
+        onSubmit={handleSubmit(submitForm)}
+      >
+        <div className={base()}>
+          <ScrollAnimation className={base()} animateIn="animate__fadeInLeft">
+            <input
+              className={input()}
+              placeholder="Seu nome"
+              {...register('name')}
+            />
+          </ScrollAnimation>
+          {errors?.name && (
+            <p className="mt-1  font-normal text-rose-600">
+              {errors?.name?.message}
+            </p>
+          )}
+          <ScrollAnimation className={base()} animateIn="animate__fadeInDown">
+            <input
+              className={input()}
+              placeholder="Seu E-mail"
+              {...register('email')}
+              type="email"
+            />
+          </ScrollAnimation>
+          {errors?.email && (
+            <p className="mt-1  font-normal text-rose-600">
+              {errors?.email?.message}
+            </p>
+          )}
+          <ScrollAnimation className={base()} animateIn="animate__fadeInLeft">
+            <input
+              placeholder="Assunto"
+              className={input()}
+              {...register('message')}
+              type="text"
+            />
+          </ScrollAnimation>
+          {errors?.message && (
+            <p className="mt-1  font-normal text-rose-600">
+              {errors?.message?.message}
+            </p>
+          )}
+          <ScrollAnimation className={base()} animateIn="animate__fadeInLeft">
+            <button className={isSubmit ? 'disabled' : submit()} type="submit">
+              Enviar
+            </button>
+          </ScrollAnimation>
+        </div>
+      </form>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
+      {/* Same as */}
+      <ToastContainer />
+    </>
   );
 };
 
