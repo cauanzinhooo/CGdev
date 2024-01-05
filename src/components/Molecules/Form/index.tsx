@@ -24,11 +24,11 @@ const schema = yup
 
 const form = tv({
   slots: {
-    base: 'flex flex-col items-center justify-center gap-8',
+    base: 'relative z-20 flex flex-col items-center justify-center gap-8',
     input:
-      ' w-[300px] rounded-md bg-green-950 px-5 py-6  text-left  font-serif text-lg text-white-0 placeholder-slate-50 focus:outline-none focus:ring focus:ring-green-150 active:bg-green-950 sm:w-[500px] lg:mx-0 ',
+      ' relative w-[300px] rounded-md bg-green-150 px-5  py-6  text-left  font-serif text-lg text-white-0 placeholder-slate-50 focus:outline-none focus:ring focus:ring-green-150 active:bg-green-950 sm:w-[500px] lg:mx-0 ',
     submit:
-      ' h-[64px] w-[164px] rounded-md bg-green-100 font-sans text-2xl font-bold text-white-0 ',
+      ' h-[64px] w-[164px] rounded-md bg-green-950 font-sans text-2xl font-bold text-white-0 ',
   },
 });
 type FormProps = {
