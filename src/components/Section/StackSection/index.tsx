@@ -18,7 +18,7 @@ import threeImage from '@/public/assets/images/stackImage.svg';
 
 const stack = tv({
   slots: {
-    base: 'my-[60px]',
+    base: 'my-[60px] bg-[#eeeded] py-10',
     wrap: 'container mx-auto flex flex-col-reverse justify-between xl:flex-row',
     row: 'mx-auto flex w-full  flex-col justify-center  font-sans  text-white-0 sm:w-[500px] xl:m-0 xl:w-[780px]',
     row1: 'mx-auto  flex w-full flex-wrap justify-center gap-12 text-center xl:m-0 xl:mt-24 xl:w-[850px] xl:gap-14',

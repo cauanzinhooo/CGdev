@@ -3,7 +3,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 import emailjs from '@emailjs/browser';
 import { yupResolver } from '@hookform/resolvers/yup';
-import React, { useRef, useState } from 'react';
+import React, { useRef } from 'react';
 // @ts-ignore
 import ScrollAnimation from 'react-animate-on-scroll';
 import { useForm } from 'react-hook-form';
@@ -24,9 +24,9 @@ const schema = yup
 
 const form = tv({
   slots: {
-    base: 'flex flex-col items-center justify-center gap-6',
+    base: 'flex flex-col items-center justify-center gap-8',
     input:
-      'w-[500px] rounded-md bg-green-950 px-5  py-6  text-left font-serif text-xl text-white-0 placeholder-slate-50 focus:outline-none focus:ring focus:ring-green-50 active:bg-green-950 lg:mx-0 ',
+      ' w-[300px] rounded-md bg-green-950 px-5 py-6  text-left  font-serif text-lg text-white-0 placeholder-slate-50 focus:outline-none focus:ring focus:ring-green-150 active:bg-green-950 sm:w-[500px] lg:mx-0 ',
     submit:
       ' h-[64px] w-[164px] rounded-md bg-green-100 font-sans text-2xl font-bold text-white-0 ',
   },
@@ -38,19 +38,16 @@ type FormProps = {
 };
 
 const Form = () => {
-  const [isSubmit, setIsSubmit] = useState(false);
-
   const {
     register,
     handleSubmit,
-    setValue,
+    reset,
     formState: { errors },
   } = useForm<FormProps>({ resolver: yupResolver(schema) });
 
   const { base, input, submit } = form();
   const formm = useRef(null);
   const submitForm = async () => {
-    setIsSubmit(true);
     try {
       emailjs.sendForm(
         'service_bhhg1kw',
@@ -58,19 +55,14 @@ const Form = () => {
         formm.current!,
         'WAK_C_0eZD0pjZXXp',
       );
-      setValue('name', '');
-      setValue('email', '');
-      setValue('message', '');
+      reset();
       toast.success('Formulário Enviado !', {
-        position: toast.POSITION.TOP_RIGHT,
+        position: toast.POSITION.TOP_LEFT,
       });
     } catch (error) {
       toast.error('Erro ao enviar Formulário !', {
-        position: toast.POSITION.TOP_RIGHT,
+        position: toast.POSITION.TOP_LEFT,
       });
-    } finally {
-      await new Promise((resolve) => setTimeout(resolve, 3000));
-      setIsSubmit(false);
     }
   };
   return (
@@ -120,7 +112,7 @@ const Form = () => {
             </p>
           )}
           <ScrollAnimation className={base()} animateIn="animate__fadeInLeft">
-            <button className={isSubmit ? 'disabled' : submit()} type="submit">
+            <button className={submit()} type="submit">
               Enviar
             </button>
           </ScrollAnimation>
@@ -128,7 +120,7 @@ const Form = () => {
       </form>
       <ToastContainer
         position="top-right"
-        autoClose={5000}
+        autoClose={4000}
         hideProgressBar={false}
         newestOnTop={false}
         closeOnClick

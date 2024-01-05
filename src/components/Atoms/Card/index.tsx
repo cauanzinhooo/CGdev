@@ -13,10 +13,10 @@ type CardProps = {
 
 const card = tv({
   slots: {
-    Base: 'card mx-1 h-[450px] w-[330px] rounded-lg bg-green-950 shadow-lg shadow-green-950 sm:h-[450px] sm:w-[330px]',
+    Base: 'card mx-1 h-[450px] w-[300px] rounded-lg bg-green-950 shadow-lg shadow-green-950 sm:h-[450px] sm:w-[330px]',
     Rotate: 'card-side front',
-    FrontCard: ' h-[450px] w-[330px] text-brown-50  sm:w-[330px]',
-    SideCard: 'card-side back h-[450px] w-[330px] sm:w-[330px]',
+    FrontCard: ' h-[450px] w-[300px] text-brown-50  sm:w-[330px]',
+    SideCard: 'card-side back h-[450px] w-[300px] sm:w-[330px]',
     IconTitle: 'mt-5 flex justify-center text-green-50 ',
     Title: 'mt-3 text-center font-serif text-2xl text-white-0',
     Description: ' mx-2 mt-5 text-center font-serif text-xl text-white-0',
