@@ -1,74 +1,37 @@
-import { FaEnvelope, FaWhatsapp } from 'react-icons/fa';
+import Image from 'next/image';
 import { tv } from 'tailwind-variants';
+
+import LineMenu from '@/components/Atoms/LineMenu';
+import Social from '@/components/Atoms/Social';
+import LogoCG from '@/public/assets/images/cgDev.svg';
 
 const footer = tv({
   slots: {
-    footerWrapper: 'mt-20 w-full bg-green-950',
+    footerWrapper: 'mt-12 w-full bg-green-950',
     footerContainer:
-      'container mx-auto flex flex-col gap-2 lg:flex lg:flex-row lg:gap-5 ',
-    iconsWrapper: 'flex items-center gap-2 text-2xl  text-slate-50',
-    iconsColor: 'text-lg text-[#EFEFEF;]',
-    utilityWrapper: 'flex flex-col justify-center py-3 text-center lg:py-5',
-    utilityLi: 'text-4xl text-slate-50',
+      'container mx-auto flex flex-col items-center justify-center ',
   },
 });
 
-const {
-  footerWrapper,
-  footerContainer,
-  iconsWrapper,
-  iconsColor,
-  utilityWrapper,
-  utilityLi,
-} = footer();
+const { footerWrapper, footerContainer } = footer();
 
-const utilityLinks = [
-  {
-    id: 1,
-    label: 'Portfólio',
-    href: 'https://www.instagram.com',
-  },
-  {
-    id: 2,
-    label: 'Contato',
-    href: '',
-  },
-  {
-    id: 3,
-    label: 'Enviar Mensagem',
-    href: '',
-  },
-];
 const Footer = () => {
   return (
     <footer className={footerWrapper()}>
       <div className={footerContainer()}>
-        <div className="mx-auto lg:mx-0">
-          <h2 className="text-4xl text-slate-50 lg:mt-5">Entre em Contato</h2>
-          <ul>
-            <li>
-              <a className={iconsWrapper()} href="a">
-                <FaEnvelope />
-                <p className={iconsColor()}>cauan21gomes@hotmail.com</p>
-              </a>
-            </li>
-            <li>
-              <a className={iconsWrapper()} href="a">
-                <FaWhatsapp />
-                <p className={iconsColor()}>(21) 97932-6886</p>
-              </a>
-            </li>
-          </ul>
+        <Image
+          className="mt-5"
+          width={140}
+          height={100}
+          alt="IMAGE"
+          src={LogoCG}
+        />
+        <div className="mb-2 flex  text-lg">
+          <LineMenu />
         </div>
-        <div className={utilityWrapper()}>
-          <h2 className={utilityLi()}>Links úteis</h2>
-          {utilityLinks.map((link: any) => (
-            <ul className="text-center lg:text-left" key={link.id}>
-              <a href={link.href}>
-                <li className="text-[#EFEFEF]">-{link.label}</li>
-              </a>
-            </ul>
-          ))}
+        <div className="flex flex-col items-center font-serif text-lg text-green-50">
+          <Social outlined="sized" />
+          <p>&copy; CGDev 2024. Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>

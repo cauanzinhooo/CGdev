@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router';
 import React from 'react';
 import { tv } from 'tailwind-variants';
 
@@ -12,32 +13,41 @@ const navegation = [
   {
     id: 1,
     label: 'Ínicio',
+    href: '/',
   },
   {
     id: 2,
     label: 'Sobre',
-    href: '',
+    href: '/sobre',
   },
   {
     id: 3,
     label: 'Contato',
-    href: '',
+    href: '/contato',
   },
   {
     id: 4,
     label: 'Portfólio',
-    href: '',
+    href: '/portfolio',
   },
 ];
+
 const LineMenu = () => {
+  const router = useRouter();
   const { base, baseRow } = Navegation();
+
   return (
-    <nav className="relative mt-2   ">
+    <nav className="relative mt-2">
       <div className={baseRow()}>
         {navegation.map((item: any) => (
           <ul key={item.id}>
             <li>
-              <a className={base()} href={item.href}>
+              <a
+                className={`${base()} ${
+                  router.pathname === item.href ? 'bunda' : ''
+                }`}
+                href={item.href}
+              >
                 {item.label}
               </a>
             </li>

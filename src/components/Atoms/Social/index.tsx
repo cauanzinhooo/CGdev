@@ -3,14 +3,16 @@ import { FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { tv } from 'tailwind-variants';
 
 const Socials = tv({
-  base: 'hidden lg:flex lg:flex-row',
+  base: 'hidden gap-5  text-white-0 lg:flex lg:flex-row ',
   variants: {
     outlined: {
       true: 'flex rounded-full border-[2px] border-slate-50 p-5 hover:border-[#EFEFEF] hover:text-[#EFEFEF]',
+      sized:
+        'flex rounded-full border-[2px] border-slate-50 p-2 text-xl hover:border-[#EFEFEF] hover:text-[#EFEFEF]',
     },
     size: {
       sm: 'mt-7 flex justify-center gap-5 text-2xl text-white-0  lg:justify-start',
-      md: 'flex justify-center gap-5 text-[40px]',
+      md: 'flex justify-center gap-5  text-[40px]',
     },
   },
 });
