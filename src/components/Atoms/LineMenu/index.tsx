@@ -1,5 +1,7 @@
 import { useRouter } from 'next/router';
 import React from 'react';
+// @ts-ignore
+import { Link as ScrollLink } from 'react-scroll';
 import { tv } from 'tailwind-variants';
 
 const Navegation = tv({
@@ -14,16 +16,19 @@ const navegation = [
     id: 1,
     label: 'Ínicio',
     href: '/',
+    to: 'home',
   },
   {
     id: 2,
     label: 'Sobre',
     href: '/sobre',
+    to: 'about',
   },
   {
     id: 3,
     label: 'Contato',
     href: '/contato',
+    to: 'contact',
   },
   {
     id: 4,
@@ -42,14 +47,18 @@ const LineMenu = () => {
         {navegation.map((item: any) => (
           <ul key={item.id}>
             <li>
-              <a
-                className={`${base()} ${
-                  router.pathname === item.href ? 'bunda' : ''
-                }`}
+              <ScrollLink
+                smooth // Ativa a animação de rolagem suave
+                offset={-70} // Ajuste o offset conforme necessário para compensar a barra de navegação
+                duration={500}
                 href={item.href}
+                to={item.to}
+                className={`${base()} ${
+                  router.pathname === item.href ? 'bg-red-300' : ''
+                }`}
               >
                 {item.label}
-              </a>
+              </ScrollLink>
             </li>
           </ul>
         ))}

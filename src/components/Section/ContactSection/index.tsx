@@ -26,7 +26,7 @@ const ContactSection = () => {
   const { base, row, container, image, imagemWrap, titleWrap } =
     contactSection();
   return (
-    <section className={base()}>
+    <section id="contact" className={base()}>
       <div className={row()}>
         <div className={container()}>
           <div className={imagemWrap()}>

@@ -34,7 +34,7 @@ const {
 } = aboutSection();
 const About = () => {
   return (
-    <main className={aboutWrapper()}>
+    <main id="about" className={aboutWrapper()}>
       <ScrollAnimation animateIn="animate__fadeInLeft" animateOnce>
         <div className={headingWrapper()}>
           <h1 className={aboutHeading()}>Desenvolvedor Web</h1>
