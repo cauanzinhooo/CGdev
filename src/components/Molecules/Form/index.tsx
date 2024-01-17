@@ -73,7 +73,11 @@ const Form = () => {
         onSubmit={handleSubmit(submitForm)}
       >
         <div className={base()}>
-          <ScrollAnimation className={base()} animateIn="animate__fadeInLeft">
+          <ScrollAnimation
+            animateOnce
+            className={base()}
+            animateIn="animate__fadeInLeft"
+          >
             <input
               className={input()}
               placeholder="Seu nome"
@@ -85,7 +89,11 @@ const Form = () => {
               {errors?.name?.message}
             </p>
           )}
-          <ScrollAnimation className={base()} animateIn="animate__fadeInDown">
+          <ScrollAnimation
+            animateOnce
+            className={base()}
+            animateIn="animate__fadeInDown"
+          >
             <input
               className={input()}
               placeholder="Seu E-mail"
@@ -98,7 +106,11 @@ const Form = () => {
               {errors?.email?.message}
             </p>
           )}
-          <ScrollAnimation className={base()} animateIn="animate__fadeInLeft">
+          <ScrollAnimation
+            animateOnce
+            className={base()}
+            animateIn="animate__fadeInLeft"
+          >
             <input
               placeholder="Assunto"
               className={input()}
@@ -111,7 +123,11 @@ const Form = () => {
               {errors?.message?.message}
             </p>
           )}
-          <ScrollAnimation className={base()} animateIn="animate__fadeInLeft">
+          <ScrollAnimation
+            animateOnce
+            className={base()}
+            animateIn="animate__fadeInLeft"
+          >
             <button className={submit()} type="submit">
               Enviar
             </button>

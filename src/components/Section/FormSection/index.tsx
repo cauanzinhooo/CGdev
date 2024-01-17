@@ -10,7 +10,7 @@ import Form from '@/components/Molecules/Form';
 const formSection = tv({
   slots: {
     wrap: 'my-[60px] w-full  py-10',
-    title: ` text-center  font-serif text-[45px] font-bold text-green-50 after:mx-auto  after:mt-3 after:flex after:h-1 after:w-20 after:bg-green-50 after:content-[''] sm:text-[55px] 
+    title: ` text-center  font-serif text-[45px] font-bold text-green-150 after:mx-auto  after:mt-3 after:flex after:h-1 after:w-20 after:bg-green-150 after:content-[''] sm:text-[55px] 
      `,
     base: 'container mx-auto flex  items-center justify-center ',
     contains: 'WaveForm',

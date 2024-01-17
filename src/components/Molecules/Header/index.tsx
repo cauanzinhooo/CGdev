@@ -1,16 +1,10 @@
 import Image from 'next/image';
 import { useState } from 'react';
-import {
-  FaBars,
-  FaEnvelope,
-  FaGithub,
-  FaInstagram,
-  FaLinkedin,
-  FaTimes,
-} from 'react-icons/fa';
+import { FaBars, FaTimes } from 'react-icons/fa';
 import { tv } from 'tailwind-variants';
 
 import LineMenu from '@/components/Atoms/LineMenu';
+import Social from '@/components/Atoms/Social';
 import LogoCG from '@/public/assets/images/cgDev.svg';
 
 const header = tv({
@@ -22,7 +16,7 @@ const header = tv({
     linkIcon: 'mx-4 text-4xl no-underline hover:border-none',
   },
 });
-const { headerFlex, container, barsMenu, icos, linkIcon } = header();
+const { headerFlex, container, barsMenu } = header();
 const Header = () => {
   const [openMenu, setOpenMenu] = useState(false);
   return (
@@ -48,50 +42,19 @@ const Header = () => {
         </div>
       </div>
       {openMenu && (
-        <div className="fixed left-0 top-0 z-50 h-full w-screen overflow-y-auto bg-[#A9A9A9]">
+        <div className="fixed left-0 top-0 z-50 h-full w-screen overflow-y-auto bg-green-150">
           <div>
             <button
-              className="p-5 text-4xl text-zinc-50"
+              className="p-5 text-2xl text-white-0"
               onClick={() => setOpenMenu(false)}
               type="button"
             >
               <FaTimes />
             </button>
           </div>
-          <div>
-            <div className="flex flex-col">
-              <LineMenu />
-            </div>
-            <div className="mt-10 flex items-center justify-center">
-              <a
-                target="_blank"
-                className={linkIcon()}
-                href="https://www.instagram.com/caua_gm/?next=%2F"
-              >
-                <FaInstagram className={icos()} />
-              </a>
-              <a
-                target="_blank"
-                className={linkIcon()}
-                href="https://www.linkedin.com/in/cau%C3%A3-gomes-138150216/"
-              >
-                <FaLinkedin className={icos()} />
-              </a>
-              <a
-                target="_blank"
-                className={linkIcon()}
-                href="https://github.com/cauanzinhooo"
-              >
-                <FaGithub className={icos()} />
-              </a>
-              <a
-                target="_blank"
-                className={linkIcon()}
-                href="https://github.com/cauanzinhooo"
-              >
-                <FaEnvelope className={icos()} />
-              </a>
-            </div>
+          <div className="flex flex-col items-center justify-center">
+            <LineMenu direction="col" />
+            <Social outlined size="sm" />
           </div>
         </div>
       )}

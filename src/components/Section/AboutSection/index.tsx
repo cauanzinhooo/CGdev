@@ -32,7 +32,7 @@ const {
   buttonsWrapper,
   aboutImage,
 } = aboutSection();
-const About = () => {
+const AboutSection = () => {
   return (
     <main id="about" className={aboutWrapper()}>
       <ScrollAnimation animateIn="animate__fadeInLeft" animateOnce>
@@ -64,4 +64,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default AboutSection;

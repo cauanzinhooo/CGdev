@@ -22,7 +22,7 @@ const stack = tv({
     wrap: 'container mx-auto flex flex-col-reverse justify-between xl:flex-row',
     row: 'mx-auto flex w-full  flex-col justify-center  font-sans  text-white-0 sm:w-[500px] xl:m-0 xl:w-[780px]',
     row1: 'mx-auto  flex w-full flex-wrap justify-center gap-12 text-center xl:m-0 xl:mt-24 xl:w-[850px] xl:gap-14',
-    title: `mx-auto mb-16 text-center font-serif text-[45px]  font-bold  text-green-50 after:mx-auto after:mt-3 after:block  after:h-1 after:w-20 after:bg-green-50 after:content-[''] sm:mx-0 sm:text-[55px]
+    title: `mx-auto mb-16 text-center font-serif text-[45px]  font-bold  text-green-150 after:mx-auto after:mt-3 after:block  after:h-1 after:w-20 after:bg-green-150 after:content-[''] sm:mx-0 sm:text-[55px]
      xl:mb-0`,
   },
 });

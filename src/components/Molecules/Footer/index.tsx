@@ -30,8 +30,10 @@ const Footer = () => {
           <LineMenu />
         </div>
         <div className="flex flex-col items-center font-serif text-lg text-green-50">
-          <Social outlined="sized" />
-          <p>&copy; CGDev 2024. Todos os direitos reservados.</p>
+          <Social size="xs" outlined="sized" />
+          <p className="text-center">
+            &copy; CGDev 2024. Todos os direitos reservados.
+          </p>
         </div>
       </div>
     </footer>

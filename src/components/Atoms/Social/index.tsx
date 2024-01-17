@@ -11,6 +11,7 @@ const Socials = tv({
         'flex rounded-full border-[2px] border-slate-50 p-2 hover:border-[#EFEFEF] hover:text-[#EFEFEF]',
     },
     size: {
+      xs: 'flex justify-center gap-5 text-2xl text-white-0  lg:justify-start',
       sm: 'mt-7 flex justify-center gap-5 text-2xl text-white-0  lg:justify-start',
       md: 'flex justify-center gap-5  text-[50px]',
     },
