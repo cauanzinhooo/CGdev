@@ -27,7 +27,7 @@ const Footer = () => {
           src={LogoCG}
         />
         <div className="mb-2 flex  text-lg">
-          <LineMenu />
+          <LineMenu direction="row" />
         </div>
         <div className="flex flex-col items-center font-serif text-lg text-green-50">
           <Social size="xs" outlined="sized" />

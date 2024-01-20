@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { tv } from 'tailwind-variants';
@@ -24,15 +25,17 @@ const Header = () => {
       <div className=" sexosexo z-0" />
       <div className=" relative z-20 border-b-[0.5px]  border-white-0">
         <div className={container()}>
-          <Image
-            className="mt-4  "
-            width={200}
-            height={200}
-            alt="IMAGE"
-            src={LogoCG}
-          />
+          <Link href="/">
+            <Image
+              className="mt-4  "
+              width={200}
+              height={200}
+              alt="IMAGE"
+              src={LogoCG}
+            />
+          </Link>
           <div className="hidden lg:flex">
-            <LineMenu />
+            <LineMenu direction="row" />
           </div>
           <div className={barsMenu()}>
             <button onClick={() => setOpenMenu(true)} type="button">

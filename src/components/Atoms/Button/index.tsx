@@ -14,6 +14,7 @@ const button = tv({
   variants: {
     color: {
       green: 'bg-green-100 hover:bg-green-150',
+      musg: 'bg-green-150 hover:bg-green-50',
       white: 'bg-[#EFEFEF] text-[#C4D352]',
     },
     outlined: {

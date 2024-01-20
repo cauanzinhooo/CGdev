@@ -1,18 +1,19 @@
 import 'animate.css/animate.min.css';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import ScrollAnimation from 'react-animate-on-scroll';
-import { FaChevronRight } from 'react-icons/fa';
+import { FaArrowDown, FaChevronRight } from 'react-icons/fa';
 import { tv } from 'tailwind-variants';
 
 import Button from '@/components/Atoms/Button';
-import portfoilImage from '@/public/assets/images/portImage.svg';
+import portfoilImage from '@/public/assets/images/portfoilGif.gif';
 
 const portfoilSection = tv({
   slots: {
-    base: `relative  py-12 before:absolute before:right-0 before:h-[400px] before:w-0 before:rounded-l-[50%] before:bg-green-950 before:content-[''] lg:before:w-[50%]`,
+    base: 'w-full ',
     container:
-      'container mx-auto flex flex-col items-center justify-center  lg:flex-row lg:justify-between',
+      'container mx-auto flex flex-col items-center justify-center lg:flex-row lg:justify-between',
   },
 });
 
@@ -21,36 +22,31 @@ const PortfoilSection = () => {
   return (
     <section className={base()}>
       <div className={container()}>
-        <div>
-          <ScrollAnimation
-            className="flex flex-col justify-center"
-            animateIn="animate__fadeInDown"
-          >
-            <h2 className="text-center font-serif text-[45px] font-bold text-green-150 sm:text-[55px] lg:text-left">
-              Confira meus trabalhos
+        <ScrollAnimation className={base()} animateIn="animate__fadeInLeft">
+          <div className="mx-auto flex w-full flex-col justify-center gap-5 sm:w-[600px] ">
+            <h2 className="text-center font-serif text-[35px] font-bold text-green-950 sm:text-[40px]">
+              Conecte-se com a opção mais adequada para as suas necessidades.
+              <p className="mt-5 flex justify-center">
+                <FaArrowDown color="text-green-950" />
+              </p>
             </h2>
-            <p className=" mb-5 max-w-[500px] text-center font-serif text-base text-green-950 sm:text-lg lg:text-left">
-              Explore meu Portfólio Descubra um pouco do meu trabalho e da minha
-              jornada profissional como desenvolvedor. Cada projeto é mais que
-              uma linha de código.
-            </p>
-            <div className="flex justify-center lg:justify-start">
-              <Button color="green" icon={<FaChevronRight />} size="md">
-                Ver Portfólio
+            <div className="mx-auto">
+              <Button color="musg" icon={<FaChevronRight />} size="md">
+                <Link href="/portfolio">Ver Portfólio</Link>
               </Button>
             </div>
-          </ScrollAnimation>
-        </div>
-        <div className="mx-auto flex justify-center lg:mx-0 lg:justify-end">
-          <ScrollAnimation animateIn="animate__fadeInDown">
+          </div>
+        </ScrollAnimation>
+        <ScrollAnimation className={base()} animateIn="animate__fadeInUp">
+          <div className="flex w-full justify-center lg:justify-end ">
             <Image
-              width={600}
-              className="relative mt-10"
+              className=""
               alt="portfoilImage"
+              width={600}
               src={portfoilImage}
             />
-          </ScrollAnimation>
-        </div>
+          </div>
+        </ScrollAnimation>
       </div>
     </section>
   );
