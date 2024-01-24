@@ -1,31 +1,52 @@
 import 'animate.css/animate.min.css';
 
+import Image from 'next/image';
 // @ts-ignore
 import ScrollAnimation from 'react-animate-on-scroll';
 // @ts-ignore
 import { tv } from 'tailwind-variants';
 
 import Form from '@/components/Molecules/Form';
+import mailBoxImage from '@/public/assets/images/mailbox.svg';
 
 const formSection = tv({
   slots: {
-    wrap: 'my-[60px] w-full  py-10',
-    title: ` text-center  font-serif text-[45px] font-bold text-green-150 after:mx-auto  after:mt-3 after:flex after:h-1 after:w-20 after:bg-green-150 after:content-[''] sm:text-[55px] 
-     `,
-    base: 'container mx-auto flex  items-center justify-center ',
-    contains: 'WaveForm',
+    wrap: 'container mx-auto flex flex-col gap-10 lg:flex-row lg:justify-between',
+
+    base: '',
+    contains: 'bg-green-950 py-10',
   },
 });
 
 const FormSection = () => {
-  const { base, title, wrap, contains } = formSection();
+  const { base, wrap, contains } = formSection();
   return (
     <section className={contains()}>
       <div className={wrap()}>
-        <ScrollAnimation className={base()} animateIn="animate__fadeInLeft">
-          <h2 className={title()}>Entre em contato</h2>
+        <ScrollAnimation
+          className="mx-auto max-w-[700px] items-center lg:mx-0 "
+          animateIn="animate__fadeInLeft"
+        >
+          <h2 className="text-center font-serif text-5xl font-bold text-green-50">
+            Contate-me
+          </h2>
+          <p className="mx-3 mt-5 text-center font-serif text-xl font-semibold text-white-0 lg:mx-0">
+            Estou pronto para colaborar no desenvolvimento de ideias e projetos,
+            oferecendo soluções personalizadas.
+          </p>
+          <Image
+            className="mx-auto"
+            alt="aaaa"
+            width={400}
+            src={mailBoxImage}
+          />
         </ScrollAnimation>
         <div className={base()}>
+          <ScrollAnimation animateIn="animate__fadeInLeft">
+            <h2 className="ml-1 text-center font-serif text-5xl font-bold text-green-50">
+              Me envie uma mensagem!
+            </h2>
+          </ScrollAnimation>
           <Form />
         </div>
       </div>

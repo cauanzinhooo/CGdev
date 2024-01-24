@@ -79,7 +79,7 @@ const StackSection = () => {
             <ScrollAnimation key={uuid()} animateIn="animate__fadeInDown">
               <div>
                 <Image
-                  className="h-[90px] w-[110px] sm:w-[110px] xl:w-[160px]"
+                  className="h-[90px] w-[110px] sm:w-[110px] xl:w-[140px]"
                   alt="StackImage"
                   src={img.image}
                 />

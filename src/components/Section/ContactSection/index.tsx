@@ -40,13 +40,17 @@ const ContactSection = () => {
           </div>
           <div className={titleWrap()}>
             <ScrollAnimation
-              className="flex flex-col gap-10"
+              className="flex flex-col gap-5"
               animateIn="animate__fadeInLeft"
               animateOnce
             >
-              <h2 className=" mx-1 mt-5 text-center font-serif text-[45px]">
+              <h2 className=" mx-1 mt-5  text-center font-serif text-[45px] text-white-0">
                 Fale Comigo !
               </h2>
+              <p className="mx-1 text-center font-serif text-lg text-white-0">
+                Estou aqui para proporcionar a melhor experiência de
+                atendimento, com rapidez e eficiência.
+              </p>
 
               <Social outlined="true" size="md" />
               <Button

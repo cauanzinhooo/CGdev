@@ -11,6 +11,8 @@ import { toast, ToastContainer } from 'react-toastify';
 import { tv } from 'tailwind-variants';
 import * as yup from 'yup';
 
+import Button from '@/components/Atoms/Button';
+
 const schema = yup
   .object({
     name: yup.string().required('Campo obrigatório'),
@@ -24,11 +26,11 @@ const schema = yup
 
 const form = tv({
   slots: {
-    base: 'relative z-20 flex flex-col items-center justify-center gap-8',
+    base: 'relative z-20 flex flex-col items-center justify-center gap-7',
     input:
-      ' relative w-[300px] rounded-md bg-green-150 px-5  py-6  text-left  font-serif text-lg text-white-0 placeholder-slate-50 focus:outline-none focus:ring focus:ring-green-150 active:bg-green-950 sm:w-[500px] lg:mx-0 ',
+      ' relative  w-[310px] rounded-md bg-white-0 px-3  py-4  text-left  font-serif text-lg text-slate-900 placeholder-green-100 focus:outline-none focus:ring focus:ring-green-150 active:bg-none min-[400px]:w-[400px] lg:mx-0 ',
     submit:
-      ' h-[64px] w-[164px] rounded-md bg-green-950 font-sans text-2xl font-bold text-white-0 ',
+      ' h-[64px] w-[164px] rounded-md bg-green-950 font-sans text-2xl font-bold text-green-100 ',
   },
 });
 type FormProps = {
@@ -45,7 +47,7 @@ const Form = () => {
     formState: { errors },
   } = useForm<FormProps>({ resolver: yupResolver(schema) });
 
-  const { base, input, submit } = form();
+  const { base, input } = form();
   const formm = useRef(null);
   const submitForm = async () => {
     try {
@@ -68,7 +70,7 @@ const Form = () => {
   return (
     <>
       <form
-        className="mt-14 px-2"
+        className="mt-7  px-2"
         ref={formm}
         onSubmit={handleSubmit(submitForm)}
       >
@@ -128,9 +130,9 @@ const Form = () => {
             className={base()}
             animateIn="animate__fadeInLeft"
           >
-            <button className={submit()} type="submit">
+            <Button color="green" size="xxl" type="submit">
               Enviar
-            </button>
+            </Button>
           </ScrollAnimation>
         </div>
       </form>

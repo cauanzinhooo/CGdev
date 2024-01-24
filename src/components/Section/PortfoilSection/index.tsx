@@ -11,7 +11,7 @@ import portfoilImage from '@/public/assets/images/portfoilGif.gif';
 
 const portfoilSection = tv({
   slots: {
-    base: 'w-full ',
+    base: 'w-full py-10 lg:py-0 ',
     container:
       'container mx-auto flex flex-col items-center justify-center lg:flex-row lg:justify-between',
   },
@@ -39,12 +39,7 @@ const PortfoilSection = () => {
         </ScrollAnimation>
         <ScrollAnimation className={base()} animateIn="animate__fadeInUp">
           <div className="flex w-full justify-center lg:justify-end ">
-            <Image
-              className=""
-              alt="portfoilImage"
-              width={600}
-              src={portfoilImage}
-            />
+            <Image alt="portfoilImage" width={600} src={portfoilImage} />
           </div>
         </ScrollAnimation>
       </div>

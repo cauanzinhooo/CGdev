@@ -8,23 +8,25 @@ import LineMenu from '@/components/Atoms/LineMenu';
 import Social from '@/components/Atoms/Social';
 import LogoCG from '@/public/assets/images/cgDev.svg';
 
+type HeaderProps = {
+  waved?: 'first';
+};
 const header = tv({
-  slots: {
-    headerFlex: ' relative w-full',
-    container: 'container mx-auto flex items-center justify-between py-4',
-    barsMenu: ' flex items-center px-3 text-4xl text-zinc-50 lg:hidden',
-    icos: 'text-slate-100 hover:text-red-600',
-    linkIcon: 'mx-4 text-4xl no-underline hover:border-none',
+  base: 'sexosexo z-0',
+  variants: {
+    waved: {
+      first: 'sexosexosexo z-0 bg-green-150',
+    },
   },
 });
-const { headerFlex, container, barsMenu } = header();
-const Header = () => {
+
+const Header: React.FC<HeaderProps> = ({ waved }) => {
   const [openMenu, setOpenMenu] = useState(false);
   return (
-    <header className={headerFlex()}>
-      <div className=" sexosexo z-0" />
+    <header className="relative w-full">
+      <div className={header({ waved })} />
       <div className=" relative z-20 border-b-[0.5px]  border-white-0">
-        <div className={container()}>
+        <div className="container mx-auto flex items-center justify-between py-4">
           <Link href="/">
             <Image
               className="mt-4  "
@@ -37,7 +39,7 @@ const Header = () => {
           <div className="hidden lg:flex">
             <LineMenu direction="row" />
           </div>
-          <div className={barsMenu()}>
+          <div className="flex items-center px-3 text-4xl text-zinc-50 lg:hidden">
             <button onClick={() => setOpenMenu(true)} type="button">
               <FaBars size={50} />
             </button>
