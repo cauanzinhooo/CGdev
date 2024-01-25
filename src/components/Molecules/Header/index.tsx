@@ -15,7 +15,7 @@ const header = tv({
   base: 'sexosexo z-0',
   variants: {
     waved: {
-      first: 'sexosexosexo z-0 bg-green-150',
+      first: 'sexosexosexo z-0 bg-green-100',
     },
   },
 });

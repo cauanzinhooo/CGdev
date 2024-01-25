@@ -1,13 +1,21 @@
 import Footer from '@/components/Molecules/Footer';
 import Header from '@/components/Molecules/Header';
+import AboutSection from '@/components/Section/AboutTeste';
 import ContactSection from '@/components/Section/ContactSection';
-import ProjectSection from '@/components/Section/ProjectSection';
+import ProjectImage from '@/public/assets/images/Maintenance-rafiki.svg';
 
 const Home = () => {
   return (
     <>
       <Header waved="first" />
-      <ProjectSection />
+      <AboutSection
+        title="Meus Projetos"
+        colorTitle="green"
+        href="/"
+        description=" Nesta seção, apresento uma compilação dos projetos nos quais
+        participei como desenvolvedor ao longo da minha carreira"
+        image={ProjectImage}
+      />
 
       <ContactSection />
       <Footer />
