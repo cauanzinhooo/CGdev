@@ -9,9 +9,8 @@ const Home = () => {
     <>
       <Header waved="first" />
       <AboutSection
+        href="/portfolio"
         title="Meus Projetos"
-        colorTitle="green"
-        href="/"
         description=" Nesta seção, apresento uma compilação dos projetos nos quais
         participei como desenvolvedor ao longo da minha carreira"
         image={ProjectImage}

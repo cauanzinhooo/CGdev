@@ -13,13 +13,13 @@ const Home = () => {
     <>
       <Header />
       <AboutSection
+        href="/portfolio"
         title="Desenvolvedor Web"
         description=" Me chamo Cauã Gomes Marçal, um entusiasta da arte da programação
         atuando como desenvolvedor front-end há um ano e meio. Neste espaço,
         tenho o prazer de compartilhar uma amostra do meu trabalho, onde
         vejo a programação não apenas como uma habilidade técnica, mas como
         uma verdadeira expressão artística."
-        subdescription
         image={aboutimage}
       />
 
