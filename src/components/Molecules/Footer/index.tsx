@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import React from 'react';
 import { tv } from 'tailwind-variants';
 
 import LineMenu from '@/components/Atoms/LineMenu';
@@ -6,19 +7,21 @@ import Social from '@/components/Atoms/Social';
 import LogoCG from '@/public/assets/images/cgDev.svg';
 
 const footer = tv({
-  slots: {
-    footerWrapper: 'mt-12 w-full bg-green-950',
-    footerContainer:
-      'container mx-auto flex flex-col items-center justify-center ',
+  base: 'mt-12 w-full bg-green-950',
+  variants: {
+    colored: {
+      green: 'bg-green-200',
+    },
   },
 });
+type FooterProps = {
+  colored?: 'green';
+};
 
-const { footerWrapper, footerContainer } = footer();
-
-const Footer = () => {
+const Footer: React.FC<FooterProps> = ({ colored }) => {
   return (
-    <footer className={footerWrapper()}>
-      <div className={footerContainer()}>
+    <footer className={footer({ colored })}>
+      <div className="container mx-auto flex flex-col items-center justify-center ">
         <Image
           className="mt-5"
           width={140}

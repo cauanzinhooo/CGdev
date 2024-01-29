@@ -2,22 +2,25 @@ import Footer from '@/components/Molecules/Footer';
 import Header from '@/components/Molecules/Header';
 import AboutSection from '@/components/Section/AboutTeste';
 import ContactSection from '@/components/Section/ContactSection';
-import ProjectImage from '@/public/assets/images/Maintenance-rafiki.svg';
+import WorkSection from '@/components/Section/WorksSection';
+import ProjectImage from '@/public/assets/images/portfoilImage.svg';
 
 const Home = () => {
   return (
     <>
       <Header waved="first" />
       <AboutSection
-        href="/portfolio"
+        animate="animate__fadeInUp"
+        imgAnimate="animate__fadeInDown"
         title="Meus Projetos"
-        description=" Nesta seção, apresento uma compilação dos projetos nos quais
-        participei como desenvolvedor ao longo da minha carreira"
+        description=" Nesta seção, apresento os diversos projetos nos quais desempenhei o papel de desenvolvedor ao longo da minha carreira profissional. Essa jornada enfrento desafios e conquistas, refletindo minha 
+        dedicação dentro da área."
         image={ProjectImage}
       />
+      <WorkSection />
 
-      <ContactSection />
-      <Footer />
+      <ContactSection colored="green" />
+      <Footer colored="green" />
     </>
   );
 };

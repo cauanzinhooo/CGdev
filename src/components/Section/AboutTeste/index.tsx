@@ -14,29 +14,28 @@ import Button from '@/components/Atoms/Button';
 import Social from '@/components/Atoms/Social';
 
 type AboutProps = {
-  href?: string;
-  to?: string;
   image: string | StaticImport;
   title: string;
   description: string;
+  animate: string;
+  imgAnimate: string;
 };
 
 const AboutSection: React.FC<AboutProps> = ({
   title,
   description,
   image,
-  href,
-  to,
+  animate,
+  imgAnimate,
 }: AboutProps) => {
   const router = useRouter();
   const currentPath = router.pathname;
-  console.log(currentPath);
   return (
     <main
       id="about"
       className="container relative mx-auto flex flex-col pb-10 lg:flex lg:flex-row lg:justify-between"
     >
-      <ScrollAnimation animateIn="animate__fadeInLeft" animateOnce>
+      <ScrollAnimation animateIn={animate} animateOnce>
         <div className="w-full text-center text-[42px] lg:mx-0  lg:text-left">
           <h1 className="mx-auto text-center font-serif text-[43px] font-bold text-green-50  sm:text-[50px] lg:mx-0 lg:mt-10 lg:max-w-[700px] lg:text-left">
             {title}
@@ -75,7 +74,7 @@ const AboutSection: React.FC<AboutProps> = ({
           </div>
         </div>
       </ScrollAnimation>
-      <ScrollAnimation animateIn="animate__fadeInDown" animateOnce>
+      <ScrollAnimation animateIn={imgAnimate} animateOnce>
         <div className="relative flex justify-center">
           <Image width={600} alt="ImageFile" src={image} />
         </div>

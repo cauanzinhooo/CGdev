@@ -10,35 +10,33 @@ import Button from '@/components/Atoms/Button';
 import Social from '@/components/Atoms/Social';
 import socialImage from '@/public/assets/images/socialGIf.gif';
 
+type ContactProps = {
+  colored: 'green';
+};
+
 const contactSection = tv({
-  slots: {
-    base: `relative before:absolute  before:block before:h-[400px] before:w-full before:bg-green-950 before:content-[''] after:absolute after:-bottom-0  after:h-[400px] after:w-full after:bg-green-950 after:content-['']   lg:before:h-[430px] lg:before:w-[46%] lg:before:rounded-r-3xl lg:after:right-0 lg:after:top-0 lg:after:mb-0 lg:after:h-[430px] lg:after:w-[46%] lg:after:rounded-l-3xl `,
-    row: 'container relative z-10 mx-auto  ',
-    container:
-      'flex flex-col gap-20  min-[395px]:gap-0 lg:flex lg:flex-row lg:justify-between',
-    image: '  max-w-[430px]  ',
-    imagemWrap: 'mx-auto flex  flex-col items-center text-center lg:mx-0',
-    titleWrap:
-      ' h-[400px]  w-full   font-serif text-[#FFFCF8]  lg:m-0 lg:w-[400px] lg:justify-center xl:h-[450px] xl:w-[40%]',
+  base: `relative before:absolute  before:block before:h-[400px] before:w-full before:bg-green-950 before:content-[''] after:absolute after:-bottom-0  after:h-[400px] after:w-full after:bg-green-950 after:content-['']   lg:before:h-[430px] lg:before:w-[46%] lg:before:rounded-r-3xl lg:after:right-0 lg:after:top-0 lg:after:mb-0 lg:after:h-[430px] lg:after:w-[46%] lg:after:rounded-l-3xl `,
+  variants: {
+    colored: {
+      green: 'before:bg-green-200 after:bg-green-200',
+    },
   },
 });
-const ContactSection = () => {
-  const { base, row, container, image, imagemWrap, titleWrap } =
-    contactSection();
+const ContactSection = ({ colored }: ContactProps) => {
   return (
-    <section id="contact" className={base()}>
-      <div className={row()}>
-        <div className={container()}>
-          <div className={imagemWrap()}>
+    <section id="contact" className={contactSection({ colored })}>
+      <div className="container relative z-10 mx-auto ">
+        <div className="flex flex-col gap-20  min-[395px]:gap-0 lg:flex lg:flex-row lg:justify-between">
+          <div className="mx-auto flex  flex-col items-center text-center lg:mx-0">
             <ScrollAnimation
-              className={image()}
+              className="max-w-[430px]"
               animateIn="animate__fadeInLeft"
               animateOnce
             >
               <Image alt="SocialImage" src={socialImage} />
             </ScrollAnimation>
           </div>
-          <div className={titleWrap()}>
+          <div className="h-[400px]  w-full   font-serif text-[#FFFCF8]  lg:m-0 lg:w-[400px] lg:justify-center xl:h-[450px] xl:w-[40%]">
             <ScrollAnimation
               className="flex flex-col gap-5"
               animateIn="animate__fadeInLeft"

@@ -1,5 +1,3 @@
-import Link from 'next/link';
-
 const Custom404 = () => {
   return (
     <div className="">

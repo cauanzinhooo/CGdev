@@ -13,7 +13,8 @@ const Home = () => {
     <>
       <Header />
       <AboutSection
-        href="/portfolio"
+        animate="animate__fadeInLeft"
+        imgAnimate="animate__fadeInUp"
         title="Desenvolvedor Web"
         description=" Me chamo Cauã Gomes Marçal, um entusiasta da arte da programação
         atuando como desenvolvedor front-end há um ano e meio. Neste espaço,
@@ -22,7 +23,6 @@ const Home = () => {
         uma verdadeira expressão artística."
         image={aboutimage}
       />
-
       <ServicesSection />
       <StackSection />
       <FormSection />
