@@ -6,7 +6,6 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React from 'react';
 // @ts-ignore
-import ScrollAnimation from 'react-animate-on-scroll';
 import { FaChevronRight } from 'react-icons/fa';
 import { Link as ScrollLink } from 'react-scroll';
 
@@ -35,7 +34,7 @@ const AboutSection: React.FC<AboutProps> = ({
       id="about"
       className="container relative mx-auto flex flex-col pb-10 lg:flex lg:flex-row lg:justify-between"
     >
-      <ScrollAnimation animateIn={animate} animateOnce>
+      <div>
         <div className="w-full text-center text-[42px] lg:mx-0  lg:text-left">
           <h1 className="mx-auto text-center font-serif text-[43px] font-bold text-green-50  sm:text-[50px] lg:mx-0 lg:mt-10 lg:max-w-[700px] lg:text-left">
             {title}
@@ -73,12 +72,12 @@ const AboutSection: React.FC<AboutProps> = ({
             <Social size="sm" outlined />
           </div>
         </div>
-      </ScrollAnimation>
-      <ScrollAnimation animateIn={imgAnimate} animateOnce>
+      </div>
+      <div>
         <div className="relative flex justify-center">
           <Image width={600} alt="ImageFile" src={image} />
         </div>
-      </ScrollAnimation>
+      </div>
     </main>
   );
 };

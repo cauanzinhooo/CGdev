@@ -30,8 +30,8 @@ const Header: React.FC<HeaderProps> = ({ waved }) => {
           <Link href="/">
             <Image
               className="mt-4  "
-              width={200}
-              height={200}
+              width={150}
+              height={150}
               alt="IMAGE"
               src={LogoCG}
             />
