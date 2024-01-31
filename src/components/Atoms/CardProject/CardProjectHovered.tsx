@@ -5,12 +5,11 @@ type CardHovered = {
 };
 const CardProjectHovered = ({ children }: CardHovered) => {
   return (
-    <button
-      type="button"
-      className="rounded-lg border-[1px] border-white-0 px-5 py-1 font-serif font-bold text-white-0"
-    >
-      {children}
-    </button>
+    <div className="inline items-center bg-red-400">
+      <span className=" rounded-lg border-[1px] border-white-0 px-5 py-1 font-serif font-bold text-white-0">
+        {children}
+      </span>
+    </div>
   );
 };
 
