@@ -5,8 +5,8 @@ type CardHovered = {
 };
 const CardProjectHovered = ({ children }: CardHovered) => {
   return (
-    <div className="inline items-center bg-red-400">
-      <span className=" rounded-lg border-[1px] border-white-0 px-5 py-1 font-serif font-bold text-white-0">
+    <div className="mx-3 my-5 inline-block items-center ">
+      <span className="rounded-xl border-[2px]  border-slate-50 px-3 py-1 font-serif text-base font-bold text-white-0">
         {children}
       </span>
     </div>

@@ -11,7 +11,7 @@ import Social from '@/components/Atoms/Social';
 import socialImage from '@/public/assets/images/socialGIf.gif';
 
 type ContactProps = {
-  colored: 'green';
+  colored?: 'green';
 };
 
 const contactSection = tv({

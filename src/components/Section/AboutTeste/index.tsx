@@ -5,7 +5,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React from 'react';
-// @ts-ignore
 import { FaChevronRight } from 'react-icons/fa';
 import { Link as ScrollLink } from 'react-scroll';
 
@@ -16,16 +15,12 @@ type AboutProps = {
   image: string | StaticImport;
   title: string;
   description: string;
-  animate: string;
-  imgAnimate: string;
 };
 
 const AboutSection: React.FC<AboutProps> = ({
   title,
   description,
   image,
-  animate,
-  imgAnimate,
 }: AboutProps) => {
   const router = useRouter();
   const currentPath = router.pathname;

@@ -23,8 +23,8 @@ const CardProjectRoot = ({ children, image }: CardContent) => {
         <Image alt="aaa" src={image} />
       </div>
       {isHover && inView && (
-        <div className="absolute left-0 top-0  h-full w-full  hover:bg-green-200 hover:opacity-50">
-          {children}
+        <div className="absolute left-0 top-0 h-full w-full duration-75  hover:bg-green-200 hover:opacity-70 ">
+          <div className="relative ">{children}</div>
         </div>
       )}
     </div>

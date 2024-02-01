@@ -10,8 +10,6 @@ const Home = () => {
     <>
       <Header waved="first" />
       <AboutSection
-        animate="animate__fadeInUp"
-        imgAnimate="animate__fadeInDown"
         title="Meus Projetos"
         description=" Nesta seção, apresento os diversos projetos nos quais desempenhei o papel de desenvolvedor ao longo da minha carreira profissional. Essa jornada enfrento desafios e conquistas, refletindo minha 
         dedicação dentro da área."

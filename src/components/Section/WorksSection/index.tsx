@@ -1,6 +1,7 @@
 import 'animate.css/animate.min.css';
 
 import ScrollAnimation from 'react-animate-on-scroll';
+import { FaEye } from 'react-icons/fa';
 
 import { CardProject } from '@/components/Atoms/CardProject';
 import essencialSoulImage from '@/public/assets/images/project.jpg';
@@ -12,7 +13,7 @@ const stacks = [
     tecs: [
       {
         id: 1,
-        tec: 'Next',
+        tec: 'Next.Js',
       },
       {
         id: 2,
@@ -32,53 +33,43 @@ const stacks = [
 
 const WorkSection = () => {
   return (
-    <section className="bg-[#eeeded]">
-      <h2
-        className={`mx-auto mb-16 text-center font-serif text-[45px]  font-bold  text-green-200 after:mx-auto after:mt-3 after:block  after:h-1 after:w-20 after:bg-green-200 after:content-[''] sm:mx-0 sm:text-[55px]
+    <section className="mb-24 bg-[#eeeded] py-14">
+      <ScrollAnimation animateIn="animate__fadeInLeft" animateOnce>
+        <h2
+          className={`mx-auto mb-16 text-center font-serif text-[45px]  font-bold  text-green-200 after:mx-auto after:mt-3 after:block  after:h-1 after:w-20 after:bg-green-200 after:content-[''] sm:mx-0 sm:text-[55px]
      xl:mb-0`}
-      >
-        Projetos
-      </h2>
+        >
+          Projetos
+        </h2>
+      </ScrollAnimation>
       <div className="container mx-auto flex items-center justify-center py-12 text-center">
         <ScrollAnimation animateIn="animate__fadeInLeft" animateOnce>
           <CardProject.Root title="Essencial Soul">
             <CardProject.Content image={essencialSoulImage}>
-              AAAAAAAAAAAAAAAAAAAAAAA
               <>
                 {stacks.map((item) => (
-                  <div key={item.id}>
-                    {item.tecs.map((tec) => (
+                  <div className="mt-20" key={item.id}>
+                    {item.tecs?.map((tec) => (
                       <CardProject.Hovered key={tec.id}>
                         {tec.tec}
                       </CardProject.Hovered>
                     ))}
                   </div>
                 ))}
-              </>
-              {/* <div className="m-auto flex h-full w-[600px] flex-col items-center justify-center bg-red-300">
-                <div className="flex flex-col items-center">
-                  {stacks.map((item) => (
-                    <div key={item.id}>
-                      {item.tecs.map((tech, index) => (
-                        <CardProjectHovered key={index}>
-                          {tech.tec}
-                        </CardProjectHovered>
-                      ))}
-                    </div>
-                  ))}
-                </div>
-                <div className="mt-4">
+                <a
+                  className="inline-block sm:mt-5"
+                  target="_blank"
+                  href={stacks[0]?.url}
+                >
                   <button
-                    className="rounded-lg border-[1px] border-green-50 px-5"
+                    className="mx-auto flex   items-center rounded-xl border-[2px]  border-slate-50 p-2 font-serif text-lg font-bold text-white-0"
                     type="button"
                   >
-                    <a target="_blank" href={stacks[0].url}>
-                      Visitar
-                      <FaEye />
-                    </a>
+                    Visitar
+                    <FaEye className="ml-2 mt-1" />
                   </button>
-                </div>
-              </div> */}
+                </a>
+              </>
             </CardProject.Content>
           </CardProject.Root>
         </ScrollAnimation>
