@@ -27,7 +27,7 @@ const FormSection = () => {
           className="mx-auto max-w-[700px] items-center lg:mx-0 "
           animateIn="animate__fadeInLeft"
         >
-          <h2 className="text-center font-serif text-5xl font-bold text-green-50">
+          <h2 className="text-center font-serif text-5xl font-bold text-green-90">
             Contate-me
           </h2>
           <p className="mx-3 mt-5 text-center font-serif text-xl font-semibold text-white-0 lg:mx-0">
@@ -43,7 +43,7 @@ const FormSection = () => {
         </ScrollAnimation>
         <div className={base()}>
           <ScrollAnimation animateIn="animate__fadeInLeft">
-            <h2 className="ml-1 text-center font-serif text-5xl font-bold text-green-50">
+            <h2 className="ml-1 text-center font-serif text-5xl font-bold text-green-90">
               Me envie uma mensagem!
             </h2>
           </ScrollAnimation>

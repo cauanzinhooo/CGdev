@@ -75,7 +75,7 @@ const servicesSection = tv({
     row: 'container mx-auto flex flex-wrap justify-center gap-10 py-16 sm:gap-24',
     title: `text-center font-serif text-[45px]  font-bold text-green-150 after:mx-auto after:mt-3 after:block after:h-1 after:w-20
     after:bg-green-150 after:content-[''] sm:text-[55px]`,
-    icon: ' ml-3 mt-4 text-green-50 sm:ml-8',
+    icon: ' ml-3 mt-4 text-green-90 sm:ml-8',
     caracteristics: 'ml-3 mt-4 font-serif text-lg text-white-0 ',
   },
 });

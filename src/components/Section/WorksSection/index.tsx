@@ -33,7 +33,7 @@ const stacks = [
 
 const WorkSection = () => {
   return (
-    <section className="mb-24 bg-[#eeeded] py-14">
+    <section className=" bg-[#eeeded] py-14">
       <ScrollAnimation animateIn="animate__fadeInLeft" animateOnce>
         <h2
           className={`mx-auto mb-16 text-center font-serif text-[45px]  font-bold  text-green-200 after:mx-auto after:mt-3 after:block  after:h-1 after:w-20 after:bg-green-200 after:content-[''] sm:mx-0 sm:text-[55px]

@@ -31,7 +31,7 @@ const AboutSection: React.FC<AboutProps> = ({
     >
       <div>
         <div className="w-full text-center text-[42px] lg:mx-0  lg:text-left">
-          <h1 className="mx-auto text-center font-serif text-[43px] font-bold text-green-50  sm:text-[50px] lg:mx-0 lg:mt-10 lg:max-w-[700px] lg:text-left">
+          <h1 className="mx-auto text-center font-serif text-[43px] font-bold text-[#AAB444]  sm:text-[50px] lg:mx-0 lg:mt-10 lg:max-w-[700px] lg:text-left">
             {title}
           </h1>
           <p className="z-20 mx-auto mt-3 flex max-w-[600px] px-1  font-serif text-base  text-white-0 min-[500px]:text-lg lg:mx-0">

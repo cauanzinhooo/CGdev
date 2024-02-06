@@ -2,6 +2,7 @@ import Footer from '@/components/Molecules/Footer';
 import Header from '@/components/Molecules/Header';
 import AboutSection from '@/components/Section/AboutTeste';
 import ContactSection from '@/components/Section/ContactSection';
+import StepsSection from '@/components/Section/StepSection/indes';
 import WorkSection from '@/components/Section/WorksSection';
 import ProjectImage from '@/public/assets/images/portfoilImage.svg';
 
@@ -15,8 +16,8 @@ const Home = () => {
         dedicação dentro da área."
         image={ProjectImage}
       />
+      <StepsSection />
       <WorkSection />
-
       <ContactSection colored="green" />
       <Footer colored="green" />
     </>

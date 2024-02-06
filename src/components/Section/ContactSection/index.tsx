@@ -8,7 +8,7 @@ import { tv } from 'tailwind-variants';
 
 import Button from '@/components/Atoms/Button';
 import Social from '@/components/Atoms/Social';
-import socialImage from '@/public/assets/images/socialGIf.gif';
+import socialImage from '@/public/assets/images/mobileImage.svg';
 
 type ContactProps = {
   colored?: 'green';

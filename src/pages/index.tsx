@@ -15,7 +15,7 @@ const Home = () => {
       <AboutSection
         title="Desenvolvedor Web"
         description=" Me chamo Cauã Gomes Marçal, um entusiasta da arte da programação
-        atuando como desenvolvedor front-end há um ano e meio. Neste espaço,
+        atuando como desenvolvedor front-end há dois anos. Neste espaço,
         tenho o prazer de compartilhar uma amostra do meu trabalho, onde
         vejo a programação não apenas como uma habilidade técnica, mas como
         uma verdadeira expressão artística."
