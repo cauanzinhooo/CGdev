@@ -11,7 +11,7 @@ const buttonRenderRoot = ({
   selectedStep,
 }: ButtonRenderRoot) => {
   return (
-    <div className="my-5 flex max-w-[250px] flex-col rounded-md">
+    <div className="mx-auto my-5 flex max-w-[250px] flex-col  rounded-md lg:mx-0">
       <button
         className={` bg-green-150 px-6 py-2 text-xl  font-bold text-white-0 ${
           selectedStep === children ? '!bg-green-100 ' : ''

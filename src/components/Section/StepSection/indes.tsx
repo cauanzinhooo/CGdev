@@ -108,19 +108,19 @@ const Completed = [
 const Steps = [
   {
     id: 1,
-    step: 'Analise',
+    step: '1- Analise',
   },
   {
     id: 2,
-    step: 'Planejamento',
+    step: '2- Planejamento',
   },
   {
     id: 3,
-    step: 'Desenvolvimento',
+    step: '3- Desenvolvimento',
   },
   {
     id: 4,
-    step: 'Entrega',
+    step: '4- Entrega',
   },
 ];
 
@@ -131,14 +131,18 @@ const StepsSection = () => {
     setSelectedStep(step);
   };
   useEffect(() => {
-    handleButtonClick('Analise');
+    handleButtonClick('1- Analise');
   }, []);
 
   return (
-    <section className="bg-green-200">
-      <div className="container mx-auto flex justify-between  py-14">
-        <ScrollAnimation animateIn="animate__fadeInLeft" animateOnce>
-          <h2 className="text-4xl font-bold text-white-0">
+    <section className="my-20 bg-green-200">
+      <div className="container mx-auto flex flex-col justify-center gap-10 py-16 lg:flex-row lg:justify-between  lg:gap-0">
+        <ScrollAnimation
+          className="mx-auto items-center  lg:mx-0 lg:items-start "
+          animateIn="animate__fadeInLeft"
+          animateOnce
+        >
+          <h2 className="text-center text-4xl font-bold text-white-0">
             Processo de Desenvolvimento
           </h2>
           {Steps.map((step) => (
@@ -151,11 +155,14 @@ const StepsSection = () => {
             </ButtonRender.Root>
           ))}
         </ScrollAnimation>
-
-        <div className="mt-3  flex max-w-[400px] flex-row flex-wrap justify-center  gap-10 overflow-hidden">
-          {selectedStep === 'Analise' && (
+        <ScrollAnimation
+          className="mx-auto flex   max-w-[400px] flex-row flex-wrap justify-center gap-9 overflow-hidden   lg:mx-0"
+          animateIn="animate__fadeInLeft"
+          animateOnce
+        >
+          {selectedStep === '1- Analise' && (
             <motion.div
-              className="mt-3 flex flex-wrap gap-10"
+              className="mt-3 flex flex-wrap justify-center gap-10"
               initial={{ opacity: 0, y: -200 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
@@ -167,9 +174,9 @@ const StepsSection = () => {
               ))}
             </motion.div>
           )}
-          {selectedStep === 'Planejamento' && (
+          {selectedStep === '2- Planejamento' && (
             <motion.div
-              className="mt-3 flex flex-wrap gap-10"
+              className="mt-3 flex flex-wrap justify-center gap-10"
               initial={{ opacity: 0, x: 200 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
@@ -181,9 +188,9 @@ const StepsSection = () => {
               ))}
             </motion.div>
           )}
-          {selectedStep === 'Desenvolvimento' && (
+          {selectedStep === '3- Desenvolvimento' && (
             <motion.div
-              className="mt-3 flex flex-wrap gap-10"
+              className="mt-3 flex flex-wrap justify-center gap-10"
               initial={{ opacity: 0, x: -200 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
@@ -195,9 +202,9 @@ const StepsSection = () => {
               ))}
             </motion.div>
           )}
-          {selectedStep === 'Entrega' && (
+          {selectedStep === '4- Entrega' && (
             <motion.div
-              className="mt-3 flex flex-wrap gap-10"
+              className="mt-3 flex flex-wrap justify-center gap-10"
               initial={{ opacity: 0, y: 200 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
@@ -209,7 +216,7 @@ const StepsSection = () => {
               ))}
             </motion.div>
           )}
-        </div>
+        </ScrollAnimation>
       </div>
     </section>
   );
