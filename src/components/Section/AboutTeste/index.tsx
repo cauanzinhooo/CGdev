@@ -27,7 +27,7 @@ const AboutSection: React.FC<AboutProps> = ({
   return (
     <main
       id="about"
-      className="container relative mx-auto flex flex-col pb-10 lg:flex lg:flex-row lg:justify-between"
+      className="container relative mx-auto flex flex-col pb-16 lg:flex lg:flex-row lg:justify-between"
     >
       <div>
         <div className="w-full text-center text-[42px] lg:mx-0  lg:text-left">

@@ -26,7 +26,7 @@ const Header: React.FC<HeaderProps> = ({ waved }) => {
     <header className="relative w-full">
       <div className={header({ waved })} />
       <div className=" relative z-20 border-b-[0.5px]  border-white-0">
-        <div className="container mx-auto flex items-center justify-between py-4">
+        <div className="container mx-auto flex items-center justify-between py-3">
           <Link href="/">
             <Image
               className="mt-4  "

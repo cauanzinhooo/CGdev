@@ -1,7 +1,7 @@
 import React from 'react';
 
 type CardHovered = {
-  children: React.ReactNode;
+  children?: React.ReactNode;
 };
 const CardProjectHovered = ({ children }: CardHovered) => {
   return (

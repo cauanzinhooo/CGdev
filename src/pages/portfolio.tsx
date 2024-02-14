@@ -1,6 +1,7 @@
 import Footer from '@/components/Molecules/Footer';
 import Header from '@/components/Molecules/Header';
 import AboutSection from '@/components/Section/AboutTeste';
+import { BestTecnologies } from '@/components/Section/BestsTecnologiesSection';
 import ContactSection from '@/components/Section/ContactSection';
 import StepsSection from '@/components/Section/StepSection/indes';
 import WorkSection from '@/components/Section/WorksSection';
@@ -18,6 +19,7 @@ const Home = () => {
       />
       <StepsSection />
       <WorkSection />
+      <BestTecnologies />
       <ContactSection colored="green" />
       <Footer colored="green" />
     </>
