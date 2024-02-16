@@ -10,9 +10,9 @@ describe('<Button>', () => {
   });
   it('renders icon when provided', () => {
     const { getByTestId } = render(
-      <Button icon={<Fa500Px />}>Button Text</Button>,
+      <Button icon={<Fa500Px datatest-id="button-icon" />}>Button Text</Button>,
     );
-    const iconElement = getByTestId('icon');
+    const iconElement = getByTestId('button-icon');
     expect(iconElement).toBeInTheDocument();
   });
 });

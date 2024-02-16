@@ -4,7 +4,6 @@ import 'react-toastify/dist/ReactToastify.css';
 import emailjs from '@emailjs/browser';
 import { yupResolver } from '@hookform/resolvers/yup';
 import React, { useRef } from 'react';
-// @ts-ignore
 import ScrollAnimation from 'react-animate-on-scroll';
 import { useForm } from 'react-hook-form';
 import { toast, ToastContainer } from 'react-toastify';
@@ -60,6 +59,7 @@ const Form = () => {
       reset();
       toast.success('Formulário Enviado !', {
         position: toast.POSITION.TOP_LEFT,
+        toastId: 'success-toast',
       });
     } catch (error) {
       toast.error('Erro ao enviar Formulário !', {
@@ -81,6 +81,7 @@ const Form = () => {
             animateIn="animate__fadeInLeft"
           >
             <input
+              aria-label="Name"
               className={input()}
               placeholder="Seu nome"
               {...register('name')}

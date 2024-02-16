@@ -44,7 +44,8 @@ const Button = ({
     <button type={type} className={button({ size, outlined, color })}>
       <div className="flex items-center font-sans">
         {children}
-        {!!icon && icon}
+        {/* {!!icon && icon} */}
+        {icon && <div data-testid="button-icon">{icon}</div>}
       </div>
     </button>
   );
