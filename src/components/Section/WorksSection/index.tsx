@@ -31,7 +31,7 @@ const stacks = [
   },
 ];
 
-const WorkSection = () => {
+const WorksSection = () => {
   return (
     <section className=" my-20 bg-[#eeeded] ">
       <ScrollAnimation animateIn="animate__fadeInLeft" animateOnce>
@@ -77,4 +77,4 @@ const WorkSection = () => {
     </section>
   );
 };
-export default WorkSection;
+export default WorksSection;

@@ -147,6 +147,7 @@ const StepsSection = () => {
           </h2>
           {Steps.map((step) => (
             <ButtonRender.Root
+              datatest-id="button"
               key={step.id}
               onclick={() => handleButtonClick(step.step)}
               selectedStep={selectedStep}

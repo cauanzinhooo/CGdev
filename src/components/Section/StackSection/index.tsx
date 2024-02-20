@@ -3,7 +3,6 @@ import 'animate.css/animate.min.css';
 import Image from 'next/image';
 import ScrollAnimation from 'react-animate-on-scroll';
 import { tv } from 'tailwind-variants';
-import { uuid } from 'uuidv4';
 
 import dockerImage from '@/public/assets/images/icons/custom-docker-green.svg';
 import jsImage from '@/public/assets/images/icons/custom-javascript-green.svg';
@@ -30,35 +29,43 @@ const StackSection = () => {
     {
       image: jsImage,
       label: 'Javascript',
+      id: 1,
     },
     {
       image: nextImage,
       label: 'Next',
+      id: 2,
     },
 
     {
       image: reactImage,
       label: 'React',
+      id: 3,
     },
     {
       image: typeImage,
       label: 'TypeScript',
+      id: 4,
     },
     {
       image: tailwindImage,
       label: 'Tailwind',
+      id: 5,
     },
     {
       image: dockerImage,
       label: 'Docker',
+      id: 6,
     },
     {
       image: storybookImage,
       label: 'Storybook',
+      id: 7,
     },
     {
       image: jestImage,
       label: 'Jest',
+      id: 8,
     },
   ];
   const { base, wrap, row, row1, title } = stack();
@@ -75,7 +82,7 @@ const StackSection = () => {
         </div>
         <div className={row1()}>
           {imageList.map((img) => (
-            <ScrollAnimation key={uuid()} animateIn="animate__fadeInDown">
+            <ScrollAnimation key={img.id} animateIn="animate__fadeInDown">
               <div>
                 <Image
                   className="h-[90px] w-[110px] sm:w-[110px] xl:w-[140px]"
