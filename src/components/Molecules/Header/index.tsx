@@ -40,16 +40,24 @@ const Header: React.FC<HeaderProps> = ({ waved }) => {
             <LineMenu direction="row" />
           </div>
           <div className="flex items-center px-3 text-4xl text-zinc-50 lg:hidden">
-            <button onClick={() => setOpenMenu(true)} type="button">
+            <button
+              data-testid="menubutton"
+              onClick={() => setOpenMenu(true)}
+              type="button"
+            >
               <FaBars size={50} />
             </button>
           </div>
         </div>
       </div>
       {openMenu && (
-        <div className="fixed left-0 top-0 z-50 h-full w-screen overflow-y-auto bg-green-150">
+        <div
+          data-testid="menu"
+          className="fixed left-0 top-0 z-50 h-full w-screen overflow-y-auto bg-green-150"
+        >
           <div>
             <button
+              data-testid="closebutton"
               className="p-5 text-2xl text-white-0"
               onClick={() => setOpenMenu(false)}
               type="button"

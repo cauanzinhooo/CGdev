@@ -1,7 +1,6 @@
 import 'animate.css/animate.min.css';
 
 import Image from 'next/image';
-// @ts-ignore
 import ScrollAnimation from 'react-animate-on-scroll';
 import { tv } from 'tailwind-variants';
 import { uuid } from 'uuidv4';
