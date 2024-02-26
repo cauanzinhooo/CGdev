@@ -1,23 +1,19 @@
 import Footer from '@/components/Molecules/Footer';
 import Header from '@/components/Molecules/Header';
-import AboutSection from '@/components/Section/AboutTeste';
 import { BestTecnologies } from '@/components/Section/BestsTecnologiesSection';
 import ContactSection from '@/components/Section/ContactSection';
-import StepsSection from '@/components/Section/StepSection/indes';
+import Portfoil from '@/components/Section/Portfoil';
+import SocialLine from '@/components/Section/SocialLine';
+import Step from '@/components/Section/Step';
 import WorkSection from '@/components/Section/WorksSection';
-import ProjectImage from '@/public/assets/images/portfoilImage.svg';
 
 const Home = () => {
   return (
     <>
       <Header waved="first" />
-      <AboutSection
-        title="Meus Projetos"
-        description=" Nesta seção, apresento os diversos projetos nos quais desempenhei o papel de desenvolvedor ao longo da minha carreira profissional. Essa jornada enfrento desafios e conquistas, refletindo minha 
-        dedicação dentro da área."
-        image={ProjectImage}
-      />
-      <StepsSection />
+      <Portfoil />
+      <Step />
+      <SocialLine />
       <WorkSection />
       <BestTecnologies />
       <ContactSection colored="green" />

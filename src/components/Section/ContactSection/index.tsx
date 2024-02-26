@@ -42,7 +42,7 @@ const ContactSection = ({ colored }: ContactProps) => {
               animateIn="animate__fadeInLeft"
               animateOnce
             >
-              <h2 className=" mx-1 mt-5  text-center font-serif text-[45px] text-white-0">
+              <h2 className=" mx-1 mt-5  text-center font-serif text-[40px] text-white-0 min-[350px]:text-[45px]">
                 Fale Comigo !
               </h2>
               <p className="mx-1 text-center font-serif text-lg text-white-0">

@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { tv } from 'tailwind-variants';
@@ -11,31 +12,37 @@ import LogoCG from '@/public/assets/images/cgDev.svg';
 type HeaderProps = {
   waved?: 'first';
 };
+// eslint-disable-next-line tailwindcss/no-custom-classname
 const header = tv({
-  base: 'sexosexo z-0',
+  base: 'headerbg z-0',
   variants: {
     waved: {
-      first: 'sexosexosexo z-0 bg-green-100',
+      first: 'headerbg2 z-0 bg-green-100',
     },
   },
 });
 
 const Header: React.FC<HeaderProps> = ({ waved }) => {
+  const router = useRouter();
   const [openMenu, setOpenMenu] = useState(false);
   return (
     <header className="relative w-full">
       <div className={header({ waved })} />
       <div className=" relative z-20 border-b-[0.5px]  border-white-0">
         <div className="container mx-auto flex items-center justify-between py-3">
-          <Link href="/">
-            <Image
-              className="mt-4  "
-              width={150}
-              height={150}
-              alt="IMAGE"
-              src={LogoCG}
-            />
-          </Link>
+          {router.pathname === '/portfolio' ? (
+            <Social size="lg" />
+          ) : (
+            <Link href="/">
+              <Image
+                className="mt-4  "
+                width={150}
+                height={150}
+                alt="IMAGE"
+                src={LogoCG}
+              />
+            </Link>
+          )}
           <div className="hidden lg:flex">
             <LineMenu direction="row" />
           </div>

@@ -6,14 +6,14 @@ const Socials = tv({
   base: 'hidden gap-3  text-white-0 lg:flex lg:flex-row ',
   variants: {
     outlined: {
-      true: 'flex rounded-full border-[2px] border-slate-50 p-5 hover:border-[#EFEFEF] hover:text-[#EFEFEF]',
+      true: 'flex rounded-full border-[2px] border-slate-50 p-4 hover:border-[#EFEFEF] hover:text-[#EFEFEF]',
       sized:
         'flex rounded-full border-[2px] border-slate-50 p-2 hover:border-[#EFEFEF] hover:text-[#EFEFEF]',
     },
     size: {
-      xs: 'flex justify-center gap-5 text-2xl text-white-0  lg:justify-start',
       sm: 'mt-7 flex justify-center gap-5 text-2xl text-white-0  lg:justify-start',
       md: 'flex justify-center gap-5  text-4xl',
+      lg: 'flex justify-center gap-7  text-3xl',
     },
   },
 });

@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     fontFamily: {
       sans: 'Helvetica, Arial, sans-serif',
-      serif: ['monospace'],
+      serif: ['Gidugu', 'serif'],
     },
     fontSize: {
       xs: '0.75rem',

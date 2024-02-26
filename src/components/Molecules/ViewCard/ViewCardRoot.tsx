@@ -6,7 +6,7 @@ type ViewCardRoot = {
 };
 const viewCardRoot = ({ children, icon }: ViewCardRoot) => {
   return (
-    <div className=" h-32 w-36 rounded-md bg-green-150 ">
+    <div className=" h-36 w-36 rounded-md  bg-green-950 ">
       <h2 className="mx-1 mt-4 text-center font-serif text-xl font-bold text-white-0">
         {children}
       </h2>

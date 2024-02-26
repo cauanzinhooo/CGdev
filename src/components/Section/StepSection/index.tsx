@@ -135,7 +135,7 @@ const StepsSection = () => {
   }, []);
 
   return (
-    <section className="my-20 bg-green-200">
+    <section className=" bg-green-200">
       <div className="container mx-auto flex flex-col justify-center gap-10 py-16 lg:flex-row lg:justify-between  lg:gap-0">
         <ScrollAnimation
           className="mx-auto items-center  lg:mx-0 lg:items-start "
@@ -191,7 +191,7 @@ const StepsSection = () => {
           )}
           {selectedStep === '3- Desenvolvimento' && (
             <motion.div
-              className="mt-3 flex flex-wrap justify-center gap-10"
+              className="mt-3 flex flex-wrap justify-center gap-10 bg-red-300"
               initial={{ opacity: 0, x: -200 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
